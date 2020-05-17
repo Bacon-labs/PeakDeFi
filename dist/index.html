@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
+    <link rel="stylesheet" href="./assets/libs/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme-dark.min.css">
+    <!-- Title -->
+    <title>PeakDeFi</title>
+
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    <!-- Modal: fund details -->
+    <!-- IDEA: modal fundDetails -->
+    <div class="modal fade fixed-right" id="fundDetails" tabindex="-1" role="dialog" aria-labelledby="fundDetails" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-10">
+                  <!-- HEADER -->
+                  <div class="header">
+                    <div class="container-fluid">
+                      <!-- Body -->
+                      <div class="header-body">
+                        <div class="row align-items-end">
+                          <div class="col">
+                            <div class="row justify-content-between align-items-center mb-5">
+                              <div class="col-8 col-lg">
+                                <!-- Pretitle -->
+                                <div class="text-secondary mb-2">
+                                  Fund title allocation &bull; USD
+                                </div>
+                                <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+                                  $3,000.00
+                                </h1>
+                                <h1 class="display-4 mt-3 mb-0 d-block d-lg-none">
+                                  $3,000.00
+                                </h1>
+                              </div>
+                              <div class="col-4 col-lg-auto">
+
+                                <div class="avatar avatar-sm d-flex d-lg-none">
+                                  <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                                </div>
+                                <div class="avatar avatar-xl d-none d-lg-flex">
+                                  <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                                </div>
+
+                              </div>
+                            </div>
+                            <!-- Button -->
+                            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
+                              <i class="fe fe-download mr-2"></i> Buy shares
+                            </a>
+                            <!-- Button -->
+                            <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
+                              <i class="fe fe-upload mr-2"></i> Sell shares
+                            </a>
+                            <div class="row">
+                              <div class="col">
+                                <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                                <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                              </div>
+                              <div class="col-auto">
+                                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                                  <label class="btn btn-white btn-sm col">
+                                    <input type="radio" name="navColor" id="" value=""> 1W
+                                  </label>
+                                  <label class="btn btn-white btn-sm col ml-2 active">
+                                    <input type="radio" name="navColor" id="" value=""> 1M
+                                  </label>
+                                  <label class="btn btn-white btn-sm col ml-2">
+                                    <input type="radio" name="navColor" id="" value=""> 1A
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="chart my-3">
+                              <canvas class="chart-canvas" id="overviewChart1"></canvas>
+                            </div>
+                            <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active text-center font-weight-bold h3 mb-0" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="true">Stats</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link text-center font-weight-bold h3 mb-0" id="Fundtransactions-tab" data-toggle="tab" href="#Fundtransactions" role="tab" aria-controls="Fundtransactions" aria-selected="false">Transactions</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> <!-- / .row -->
+                      </div> <!-- / .header-body -->
+
+                    </div>
+                  </div> <!-- / .header -->
+
+                  <!-- CARDS -->
+                  <div class="container-fluid">
+                    <div class="tab-content mb-5" id="myTabContent">
+                      <div class="tab-pane fade show active" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
+                                      PRICE CHANGE (CURRENT CYCLE)
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 text-success mb-0 mr-2">
+                                      <i class="fe fe-arrow-up-right"></i> 42.17% (+$7.84)
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
+                                      PRICE CHANGE (Since inception)
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 text-success mb-0 mr-2">
+                                      <i class="fe fe-arrow-up-right"></i> 423.00% (+$700.00)
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
+                                      MAX DRAWDOWN
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 text-white mb-0 mr-2">
+                                      <i class="fe fe-arrow-down-right"></i>-7.39%
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
+                                      STANDARD DEVIATION
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 text-white mb-0 mr-2">
+                                      0.1406
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="tab-pane fade" id="Fundtransactions" role="tabpanel" aria-labelledby="Fundtransactions-tab">
+                        <div class="row">
+                          <div class="col-12">
+
+                            <!-- Goals -->
+                            <div class="card">
+                              <div class="card-header">
+                                <div class="row align-items-center">
+                                  <div class="col">
+
+                                    <!-- Title -->
+                                    <h4 class="card-header-title">
+                                      Deposit & Withdraw History
+                                    </h4>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                              <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                                <table class="table table-sm table-nowrap card-table">
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <a href="#" class="text-secondary list-sort" data-sort="tx-type">
+                                          Type
+                                        </a>
+                                      </th>
+                                      <th>
+                                        <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+                                          Amount (USD)
+                                        </a>
+                                      </th>
+                                      <th>
+                                        <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
+                                          Timestamp
+                                        </a>
+                                      </th>
+                                      <th class="text-center">
+                                        <a href="#" class="text-secondary">
+                                          Transaction
+                                        </a>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="list">
+                                    <tr>
+                                      <td class="tx-type">
+                                        <i class="fe fe-download mr-2"></i> Deposit
+                                      </td>
+                                      <td class="type-amount text-success">
+                                        $300.00
+                                      </td>
+                                      <td class="tx-timestamp">
+                                        <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                                      </td>
+                                      <td class="text-center">
+                                        <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="tx-type">
+                                        <i class="fe fe-upload mr-2"></i> Withdraw
+                                      </td>
+                                      <td class="type-amount">
+                                        -$300.00
+                                      </td>
+                                      <td class="tx-timestamp">
+                                        <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                                      </td>
+                                      <td class="text-center">
+                                        <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+                    <div class="table-responsive d-block d-lg-none mb-5">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-white">Fund details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-white">
+                              <strong>Share price (USD)</strong>
+                            </td>
+                            <td class="px-0 text-right text-white border-0">
+                              $10.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>Management fee</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              0.1% of AUM
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>Success fee</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              20.0% of profit
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>Redemption fee</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              0%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>PEAK tokens staked</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              1,000.0000 PEAK
+                            </td>
+                          </tr>
+                          <td class="px-0 text-white border-0">
+                            <strong>Fund's cycle</strong><br>
+                            <small class="text-white">Management phase</small><br>
+                            <small class="text-white">Investor withdrawal phase</small><br>
+                          </td>
+                          <td class="px-0 text-white text-right border-0">
+                            30 days <br>
+                            <small class="text-white">27 days</small><br>
+                            <small class="text-white">3 days</small>
+                          </td>
+                        </tbody>
+                      </table>
+                    </div>
+                    <h2>FAQ</h2>
+                    <div class="card card-inactive mb-5">
+                      <div class="card-body">
+                        <h3>Question</h3>
+                        <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Question</h3>
+                        <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Question</h3>
+                        <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Question</h3>
+                        <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Question</h3>
+                        <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Fund details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Share price (USD)</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                              $10.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Management fee</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              0.1% of AUM
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Success fee</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              20.0% of profit
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Redemption fee</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              0%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>PEAK tokens staked</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              1,000.0000 PEAK
+                            </td>
+                          </tr>
+                          <td class="px-0 text-dark border-0">
+                            <strong>Fund's cycle</strong><br>
+                            <small class="text-dark">Management phase</small><br>
+                            <small class="text-dark">Investor withdrawal phase</small><br>
+                          </td>
+                          <td class="px-0 text-dark text-right border-0">
+                            30 days <br>
+                            <small class="text-dark">27 days</small><br>
+                            <small class="text-dark">3 days</small>
+                          </td>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: deposit money -->
+    <!-- IDEA: modal depositMoney -->
+    <div class="modal fade fixed-right" id="depositMoney" tabindex="-1" role="dialog" aria-labelledby="depositMoney" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center my-5">
+                    Buy shares
+                  </h1>
+
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label class="mt-1">Buy</label>
+                        <div class="input-group mb-4">
+                          <select class="custom-select custom-select-lg">
+                            <option value="fundtitle">Fund share A</option>
+                            <option value="fundtitle">Fund share B</option>
+                            <option value="fundtitle">Fund share C</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
+                          <label>Amount</label>
+                          <div class="input-group mb-2">
+                            <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                            <div class="input-group-append">
+                              <button class="btn border" type="button">Max</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-12 col-lg-6 mb-0">
+                          <label>Pay with</label>
+                          <div class="input-group input-group-lg mb-2">
+                            <select class="custom-select custom-select">
+                              <option value="">ETH</option>
+                              <option value="">DAI</option>
+                              <option value="">USDC</option>
+                              <option value="">WBTC</option>
+                              <option value="">LINK</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <small class="form-text text-secondary mb-4">100.0000 ETH available</small>
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Share price (USD)</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                                10.00
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 text-white border-0">
+                                <strong>Shares to receive</strong>
+                              </td>
+                              <td class="px-0 text-white text-right border-0">
+                                1,000.0000
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 text-white border-0">
+                                <strong>PEAK tokens to stake</strong><br>
+                                <small class="text-white">Available balance &bull; <a href="#" target="_blank">Buy</a></small>
+                              </td>
+                              <td class="px-0 text-white text-right border-0">
+                                1,000.0000 PEAK <br>
+                                <small class="text-white">2,000.0000 PEAK</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-top border-top-1 border-white text-white"><strong>Total cost</strong></td>
+                              <td colspan="2" class="px-0 text-right border-top border-top-1 border-white text-white">
+                                <span class="h3">30.0000 ETH</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="dashboard-full_3.html">Buy Fund share A</a>
+                      <button class="btn btn-link btn-lg btn-block text-white" id='buy'>Use Fiat</button>
+                      <div id="wyre-dropin-widget-container"></div>
+
+                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
+                      <script type="text/javascript">
+                          (function($) {
+
+                              // debit card popup
+                              var widget = new Wyre({
+                                  env: 'test',
+                                  operation: {
+                                      type: 'debitcard-hosted-dialog',
+                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
+                                      destCurrency: "ETH",
+                                      sourceAmount: 10.0,
+                                      paymentMethod: 'debit-card'
+                                  }
+                              });
+
+                              widget.on("exit", function (e) {
+                                  console.log("exit", e);
+                              })
+
+                              widget.on("error", function (e) {
+                                  console.log("error", e);
+                              })
+
+                              widget.on("complete", function (e) {
+                                  console.log("complete", e );
+                              });
+
+                              widget.on('ready', function(e) {
+                                  console.log("ready", e );
+                                  // widget.open();
+                              })
+
+                              $('#buy').click(function(){
+                                  console.log('open')
+                                  widget.open();
+                              })
+
+                          })(jQuery);
+                      </script>
+                    </div>
+                  </div>
+
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                  <!-- Text -->
+                  <p class="text-secondary small">
+                    By tapping or clicking 'Confirm', you accept the following terms of service. You also agree that your purchase will be available immediately.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Share price (USD)</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                              10.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Shares to receive</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              1,000.0000
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>PEAK tokens to deposit</strong><br>
+                              <small class="text-secondary">Available balance &bull; <a href="#" target="_blank">Buy</a></small>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              1,000.0000 PEAK <br>
+                              <small class="text-secondary">2,000.0000 PEAK</small>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-top border-top-1 border-dark text-dark"><strong>Total cost</strong></td>
+                            <td colspan="2" class="px-0 text-right border-top border-top-1 border-dark text-dark">
+                              <span class="h3">30.000000 ETH</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: witdraw money -->
+    <!-- IDEA: modal withdrawMoney -->
+    <div class="modal fade fixed-right" id="withdrawMoney" tabindex="-1" role="dialog" aria-labelledby="withdrawMoney" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center mt-5">
+                    Sell shares
+                  </h1>
+                  <h6 class="header-pretitle text-center text-muted mb-1 time-left-title">
+                    TIME LEFT UNTIL OPERATION ALLOWED
+                  </h6>
+                  <h4 class="header-title text-center text-secondary time-left-value mb-5"> 12<!---->d&nbsp;7<!---->h&nbsp;45<!---->m &nbsp;1<!---->s</h4>
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label class="mt-1">Sell</label>
+                        <div class="input-group mb-4">
+                          <select class="custom-select custom-select-lg">
+                            <option value="fundtitle">Fund share A</option>
+                            <option value="fundtitle">Fund share B</option>
+                            <option value="fundtitle">Fund share C</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="form-row">
+                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
+                          <label>Amount</label>
+                          <div class="input-group mb-2">
+                            <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                            <div class="input-group-append">
+                              <button class="btn border" type="button">Max</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-12 col-lg-6 mb-0">
+                          <label>Deposit to</label>
+                          <div class="input-group input-group-lg mb-2">
+                            <select class="custom-select custom-select">
+                              <option value="">ETH wallet</option>
+                              <option value="">DAI wallet</option>
+                              <option value="">USDC wallet</option>
+                              <option value="">WBTC wallet</option>
+                              <option value="">LINK wallet</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <small class="form-text text-secondary mb-4">1,000.0000 Shares available</small>
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Share price (USD)</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                                10.00
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Shares amount</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                                1,000.0000
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 text-white border-0">
+                                <strong>PEAK tokens to redeem</strong>
+                              </td>
+                              <td class="px-0 text-white text-right border-0">
+                                1,000.0000 PEAK
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-top border-top-1 border-white text-white"><strong>Sell shares for</strong></td>
+                              <td colspan="2" class="px-0 text-right border-top border-top-1 border-white text-white">
+                                <span class="h3">30.0000 ETH</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="dashboard-full_3.html">Confirm</a>
+                      <div id="wyre-dropin-widget-container"></div>
+
+                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
+                      <script type="text/javascript">
+                          (function($) {
+
+                              // debit card popup
+                              var widget = new Wyre({
+                                  env: 'test',
+                                  operation: {
+                                      type: 'debitcard-hosted-dialog',
+                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
+                                      destCurrency: "ETH",
+                                      sourceAmount: 10.0,
+                                      paymentMethod: 'debit-card'
+                                  }
+                              });
+
+                              widget.on("exit", function (e) {
+                                  console.log("exit", e);
+                              })
+
+                              widget.on("error", function (e) {
+                                  console.log("error", e);
+                              })
+
+                              widget.on("complete", function (e) {
+                                  console.log("complete", e );
+                              });
+
+                              widget.on('ready', function(e) {
+                                  console.log("ready", e );
+                                  // widget.open();
+                              })
+
+                              $('#buy').click(function(){
+                                  console.log('open')
+                                  widget.open();
+                              })
+
+                          })(jQuery);
+                      </script>
+                    </div>
+                  </div>
+
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                  <!-- Text -->
+                  <p class="text-secondary small">
+                    By tapping or clicking 'Confirm', you accept the following terms of service. You also agree that your purchase will be available immediately.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Share price (USD)</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                              10.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Shares amount</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                              1,000.0000
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>PEAK tokens to redeem</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              1,000.0000 PEAK
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-top border-top-1 border-dark text-dark"><strong>Sell shares for</strong></td>
+                            <td colspan="2" class="px-0 text-right border-top border-top-1 border-dark text-dark">
+                              <span class="h3">30.000000 ETH</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+
+    <!-- NAVIGATION
+    ================================================== -->
+    
+    
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidebar">
+      <div class="container-fluid">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- User (xs) -->
+        <div class="navbar-user d-md-none">
+
+          <div class="btn btn-white btn-block p-0 pr-3 rounded-xl text-left">
+            <div class="avatar avatar-sm avatar-online mr-2">
+              <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+            </div>
+            sergej.eth
+          </div>
+
+        </div>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidebarCollapse">
+          <div class="navbar-user d-none d-md-flex justify-content-start border-0 mb-5" id="sidebarUser">
+            <div class="btn btn-white btn-block p-0 pr-3 rounded-xl text-left">
+              <div class="avatar avatar-sm avatar-online mr-2">
+                <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+              </div>
+              sergej.eth
+            </div>
+          </div>
+          <!-- Navigation -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">
+                <i class="fe fe-activity"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./rewards.html">
+                <i class="fe fe-dollar-sign"></i> Rewards
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./referral.html">
+                <i class="fe fe-users"></i> Referral
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <hr class="navbar-divider my-3">
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-4">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.gitbook.com/" target="_blank">
+                Help
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">
+                 Terms of service
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+      </div>
+    </nav>
+
+    
+    
+    
+    
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-fluid">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-end">
+              <div class="col">
+                <!-- Title -->
+                <h1 class="header-title display-3 mt-3">
+                  $21,000.00
+                </h1>
+                <!-- Pretitle -->
+                <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-4">
+                  Balance in
+                  <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    USD <i class="fe fe-chevron-down text-secondary"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                    <a class="dropdown-item" href="#!">EUR</a>
+                    <a class="dropdown-item" href="#!">BTC</a>
+                    <a class="dropdown-item" href="#!">ETH</a>
+                  </div>
+                </div>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
+                  <i class="fe fe-download mr-2"></i> Buy shares
+                </a>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
+                  <i class="fe fe-upload mr-2"></i> Sell shares
+                </a>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                    <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                  </div>
+                  <div class="col-auto">
+                    <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                      <label class="btn btn-white btn-sm col">
+                        <input type="radio" name="navColor" id="" value=""> 1W
+                      </label>
+                      <label class="btn btn-white btn-sm col ml-2 active">
+                        <input type="radio" name="navColor" id="" value=""> 1M
+                      </label>
+                      <label class="btn btn-white btn-sm col ml-2">
+                        <input type="radio" name="navColor" id="" value=""> 1A
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chart my-3">
+                  <canvas class="chart-canvas" id="overviewChart"></canvas>
+                </div>
+                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="allocations-tab" data-toggle="tab" href="#allocations" role="tab" aria-controls="allocations" aria-selected="true">Allocations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="allocations" role="tabpanel" aria-labelledby="allocations-tab">
+            <div class="row">
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="./assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="./assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Goals -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Deposit & Withdraw History
+                        </h4>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                    <table class="table table-sm table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-type">
+                              Type
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+                              Amount (USD)
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-allocation">
+                              Allocation
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
+                              Timestamp
+                            </a>
+                          </th>
+                          <th class="text-center">
+                            <a href="#" class="text-secondary">
+                              Transaction
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td class="tx-type">
+                            <i class="fe fe-download mr-2"></i> Deposit
+                          </td>
+                          <td class="type-amount text-success">
+                            $300.00
+                          </td>
+                          <td class="type-allocation">
+                            Fund title
+                          </td>
+                          <td class="tx-timestamp">
+                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                          </td>
+                          <td class="text-center">
+                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tx-type">
+                            <i class="fe fe-upload mr-2"></i> Withdraw
+                          </td>
+                          <td class="type-amount">
+                            -$300.00
+                          </td>
+                          <td class="type-allocation">
+                            Fund title
+                          </td>
+                          <td class="tx-timestamp">
+                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                          </td>
+                          <td class="text-center">
+                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+    <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="./assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="./assets/libs/list.js/dist/list.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="./assets/libs/chart.js/Chart.extension.js"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+    <script src="./assets/js/dashkit.min.js"></script>
+
+
+  </body>
+</html>
