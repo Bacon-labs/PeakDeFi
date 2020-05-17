@@ -1,0 +1,429 @@
+<!-- IDEA: modal fundDetails -->
+<div class="modal fade fixed-right" id="fundDetails" tabindex="-1" role="dialog" aria-labelledby="fundDetails" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-vertical" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-lg-0">
+        <div class="d-inline-block w-lg-60">
+          <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+            <i class="fe fe-arrow-left h2"></i>
+          </button>
+          <div class="row justify-content-center">
+            <div class="col col-lg-10">
+              <!-- HEADER -->
+              <div class="header">
+                <div class="container-fluid">
+                  <!-- Body -->
+                  <div class="header-body">
+                    <div class="row align-items-end">
+                      <div class="col">
+                        <div class="row justify-content-between align-items-center mb-5">
+                          <div class="col-8 col-lg">
+                            <!-- Pretitle -->
+                            <div class="text-secondary mb-2">
+                              Fund title allocation &bull; USD
+                            </div>
+                            <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+                              $3,000.00
+                            </h1>
+                            <h1 class="display-4 mt-3 mb-0 d-block d-lg-none">
+                              $3,000.00
+                            </h1>
+                          </div>
+                          <div class="col-4 col-lg-auto">
+
+                            <div class="avatar avatar-sm d-flex d-lg-none">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            <div class="avatar avatar-xl d-none d-lg-flex">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+
+                          </div>
+                        </div>
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
+                          <i class="fe fe-download mr-2"></i> Buy shares
+                        </a>
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
+                          <i class="fe fe-upload mr-2"></i> Sell shares
+                        </a>
+                        <div class="row">
+                          <div class="col">
+                            <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                            <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                          </div>
+                          <div class="col-auto">
+                            <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                              <label class="btn btn-white btn-sm col">
+                                <input type="radio" name="navColor" id="" value=""> 1W
+                              </label>
+                              <label class="btn btn-white btn-sm col ml-2 active">
+                                <input type="radio" name="navColor" id="" value=""> 1M
+                              </label>
+                              <label class="btn btn-white btn-sm col ml-2">
+                                <input type="radio" name="navColor" id="" value=""> 1A
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="chart my-3">
+                          <canvas class="chart-canvas" id="overviewChart1"></canvas>
+                        </div>
+                        <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active text-center font-weight-bold h3 mb-0" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="true">Stats</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-center font-weight-bold h3 mb-0" id="Fundtransactions-tab" data-toggle="tab" href="#Fundtransactions" role="tab" aria-controls="Fundtransactions" aria-selected="false">Transactions</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div> <!-- / .row -->
+                  </div> <!-- / .header-body -->
+
+                </div>
+              </div> <!-- / .header -->
+
+              <!-- CARDS -->
+              <div class="container-fluid">
+                <div class="tab-content mb-5" id="myTabContent">
+                  <div class="tab-pane fade show active" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+
+                        <!-- stat -->
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col mb-3 mb-lg-0">
+
+                                <!-- Title -->
+                                <h6 class="text-uppercase text-secondary mb-2">
+                                  PRICE CHANGE (CURRENT CYCLE)
+                                </h6>
+
+                                <!-- Heading -->
+                                <span class="h2 text-success mb-0 mr-2">
+                                  <i class="fe fe-arrow-up-right"></i> 42.17% (+$7.84)
+                                </span>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-lg-6">
+
+                        <!-- stat -->
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col mb-3 mb-lg-0">
+
+                                <!-- Title -->
+                                <h6 class="text-uppercase text-secondary mb-2">
+                                  PRICE CHANGE (Since inception)
+                                </h6>
+
+                                <!-- Heading -->
+                                <span class="h2 text-success mb-0 mr-2">
+                                  <i class="fe fe-arrow-up-right"></i> 423.00% (+$700.00)
+                                </span>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+
+                        <!-- stat -->
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col mb-3 mb-lg-0">
+
+                                <!-- Title -->
+                                <h6 class="text-uppercase text-secondary mb-2">
+                                  MAX DRAWDOWN
+                                </h6>
+
+                                <!-- Heading -->
+                                <span class="h2 text-white mb-0 mr-2">
+                                  <i class="fe fe-arrow-down-right"></i>-7.39%
+                                </span>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-lg-6">
+
+                        <!-- stat -->
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col mb-3 mb-lg-0">
+
+                                <!-- Title -->
+                                <h6 class="text-uppercase text-secondary mb-2">
+                                  STANDARD DEVIATION
+                                </h6>
+
+                                <!-- Heading -->
+                                <span class="h2 text-white mb-0 mr-2">
+                                  0.1406
+                                </span>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="tab-pane fade" id="Fundtransactions" role="tabpanel" aria-labelledby="Fundtransactions-tab">
+                    <div class="row">
+                      <div class="col-12">
+
+                        <!-- Goals -->
+                        <div class="card">
+                          <div class="card-header">
+                            <div class="row align-items-center">
+                              <div class="col">
+
+                                <!-- Title -->
+                                <h4 class="card-header-title">
+                                  Deposit & Withdraw History
+                                </h4>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                          <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                            <table class="table table-sm table-nowrap card-table">
+                              <thead>
+                                <tr>
+                                  <th>
+                                    <a href="#" class="text-secondary list-sort" data-sort="tx-type">
+                                      Type
+                                    </a>
+                                  </th>
+                                  <th>
+                                    <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+                                      Amount (USD)
+                                    </a>
+                                  </th>
+                                  <th>
+                                    <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
+                                      Timestamp
+                                    </a>
+                                  </th>
+                                  <th class="text-center">
+                                    <a href="#" class="text-secondary">
+                                      Transaction
+                                    </a>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody class="list">
+                                <tr>
+                                  <td class="tx-type">
+                                    <i class="fe fe-download mr-2"></i> Deposit
+                                  </td>
+                                  <td class="type-amount text-success">
+                                    $300.00
+                                  </td>
+                                  <td class="tx-timestamp">
+                                    <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                                  </td>
+                                  <td class="text-center">
+                                    <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="tx-type">
+                                    <i class="fe fe-upload mr-2"></i> Withdraw
+                                  </td>
+                                  <td class="type-amount">
+                                    -$300.00
+                                  </td>
+                                  <td class="tx-timestamp">
+                                    <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                                  </td>
+                                  <td class="text-center">
+                                    <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+                <div class="table-responsive d-block d-lg-none mb-5">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-0 text-white">Fund details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-0 border-0 text-white">
+                          <strong>Share price (USD)</strong>
+                        </td>
+                        <td class="px-0 text-right text-white border-0">
+                          $10.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-white border-0">
+                          <strong>Management fee</strong>
+                        </td>
+                        <td class="px-0 text-white text-right border-0">
+                          0.1% of AUM
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-white border-0">
+                          <strong>Success fee</strong>
+                        </td>
+                        <td class="px-0 text-white text-right border-0">
+                          20.0% of profit
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-white border-0">
+                          <strong>Redemption fee</strong>
+                        </td>
+                        <td class="px-0 text-white text-right border-0">
+                          0%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-white border-0">
+                          <strong>PEAK tokens staked</strong>
+                        </td>
+                        <td class="px-0 text-white text-right border-0">
+                          1,000.0000 PEAK
+                        </td>
+                      </tr>
+                      <td class="px-0 text-white border-0">
+                        <strong>Fund's cycle</strong><br>
+                        <small class="text-white">Management phase</small><br>
+                        <small class="text-white">Investor withdrawal phase</small><br>
+                      </td>
+                      <td class="px-0 text-white text-right border-0">
+                        30 days <br>
+                        <small class="text-white">27 days</small><br>
+                        <small class="text-white">3 days</small>
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+                <h2>FAQ</h2>
+                <div class="card card-inactive mb-5">
+                  <div class="card-body">
+                    <h3>Question</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Question</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Question</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Question</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Question</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+          <div class="bg-white vh-100 p-4">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <div class="table-responsive">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-0 text-dark">Fund details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-0 border-0 text-dark">
+                          <strong>Share price (USD)</strong>
+                        </td>
+                        <td class="px-0 text-right text-dark border-0">
+                          $10.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-dark border-0">
+                          <strong>Management fee</strong>
+                        </td>
+                        <td class="px-0 text-dark text-right border-0">
+                          0.1% of AUM
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-dark border-0">
+                          <strong>Success fee</strong>
+                        </td>
+                        <td class="px-0 text-dark text-right border-0">
+                          20.0% of profit
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-dark border-0">
+                          <strong>Redemption fee</strong>
+                        </td>
+                        <td class="px-0 text-dark text-right border-0">
+                          0%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 text-dark border-0">
+                          <strong>PEAK tokens staked</strong>
+                        </td>
+                        <td class="px-0 text-dark text-right border-0">
+                          1,000.0000 PEAK
+                        </td>
+                      </tr>
+                      <td class="px-0 text-dark border-0">
+                        <strong>Fund's cycle</strong><br>
+                        <small class="text-dark">Management phase</small><br>
+                        <small class="text-dark">Investor withdrawal phase</small><br>
+                      </td>
+                      <td class="px-0 text-dark text-right border-0">
+                        30 days <br>
+                        <small class="text-dark">27 days</small><br>
+                        <small class="text-dark">3 days</small>
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- / modal -->
