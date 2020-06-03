@@ -11418,6 +11418,21 @@ a:focus, button:focus {
 .modal-dialog-vertical {
   max-width: 100%; }
 
+.bg-dark-curved {
+  background-color: transparent !important;
+  background-image: radial-gradient(#131415, #131415 70%, transparent 70.1%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 200% 150%; }
+
+.bg-dark {
+  background-color: #131415; }
+
+.btn-white-opacity {
+  width: 88px !important;
+  height: 88px !important;
+  background-color: rgba(255, 255, 255, 0.5); }
+
 @media (min-width: 1024px) {
   .w-lg-60 {
     width: 60%; }

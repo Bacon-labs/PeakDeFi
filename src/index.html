@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-    "title": "PeakDeFi"
+    "title": "PeakDeFi - Get started"
     })
   </head>
   <body>
@@ -11,323 +11,353 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- NAVIGATION
-    ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
+    <nav class="navbar border-0">
+      <div class="container align-items-center px-0 px-lg-3">
+        <a class="navbar-brand mr-auto text-white" href="#">
+          <div class="avatar mr-2">
+            <span class="avatar-title rounded-circle bg-white text-dark">PD</span>
+          </div>
+          <span class="d-none d-lg-inline-block">PeakDeFi</span>
+        </a>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-white rounded-xl d-flex align-items-center lift mr-2 mr-lg-3" href="" target="_blank">
+            <div class="avatar avatar-xs mr-2">
+              <span class="avatar-title rounded-circle bg-warning"><i class="fe fe-dollar-sign text-dark"></i></span>
+            </div>
+            Invest
+          </a>
+          <a class="btn btn-white rounded-xl d-flex align-items-center lift" href="" target="_blank">
+            <div class="avatar avatar-xs mr-2">
+              <span class="avatar-title rounded-circle bg-success"><i class="fe fe-award text-dark"></i></span>
+            </div>
+            Earn <span class="d-none d-lg-flex ml-2">rewards</span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
 
     <!-- MAIN CONTENT
     ================================================== -->
-    <div class="main-content">
+    <div class="main-content bg-light">
+      <div class="bg-ellipses bg-dark-curved pb-4 pb-lg-0">
 
-      <!-- HEADER -->
-      <div class="header">
-        <div class="container-fluid">
+        <!-- HEADER -->
+        <div class="header">
+          <div class="container">
 
-          <!-- Body -->
-          <div class="header-body">
-            <div class="row align-items-end">
-              <div class="col">
-                <!-- Title -->
-                <h1 class="header-title display-3 mt-3">
-                  $21,000.00
-                </h1>
-                <!-- Pretitle -->
-                <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-4">
-                  Balance in
-                  <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    USD <i class="fe fe-chevron-down text-secondary"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
-                    <a class="dropdown-item" href="#!">EUR</a>
-                    <a class="dropdown-item" href="#!">BTC</a>
-                    <a class="dropdown-item" href="#!">ETH</a>
-                  </div>
-                </div>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
-                  <i class="fe fe-download mr-2"></i> Buy shares
-                </a>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
-                  <i class="fe fe-upload mr-2"></i> Sell shares
-                </a>
-                <div class="row">
-                  <div class="col">
-                    <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
-                    <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
-                  </div>
-                  <div class="col-auto">
-                    <div class="btn-group-toggle d-flex" data-toggle="buttons">
-                      <label class="btn btn-white btn-sm col">
-                        <input type="radio" name="navColor" id="" value=""> 1W
-                      </label>
-                      <label class="btn btn-white btn-sm col ml-2 active">
-                        <input type="radio" name="navColor" id="" value=""> 1M
-                      </label>
-                      <label class="btn btn-white btn-sm col ml-2">
-                        <input type="radio" name="navColor" id="" value=""> 1A
-                      </label>
+            <!-- Body -->
+            <div class="header-body border-0">
+              <div class="row justify-content-center text-center">
+                <div class="col col-lg-8">
+                  <h6 class="text-uppercase text-soft-purple mb-2">
+                    Meet PeakDeFi
+                  </h6>
+                  <!-- Title -->
+                  <h1 class="header-title display-3 mt-4 mb-2 d-none d-lg-block">
+                    An assets management protocol built on the Ethereum blockchain.
+                  </h1>
+                  <h1 class="header-title display-4 mt-4 mb-4 d-block d-lg-none">
+                    An assets management protocol built on the Ethereum blockchain.
+                  </h1>
+                  <p class="lead text-secondary mb-4">Get exposure to cryptocurrencies (long and short) and precious metals without the management and rebalancing hurdles.</p>
+                  <div class="row my-5 flex justify-content-center">
+                    <div class="col-auto mb-4 mb-lg-0">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-white mb-2">
+                        Assets under management
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 text-success mb-0 mr-2">
+                        $1,309,648.42 USD
+                      </span>
+                    </div>
+                    <div class="col-auto">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-white mb-2">
+                        Current rewards pool
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 text-success mb-0 mr-2">
+                        $21,640 USD
+                      </span>
                     </div>
                   </div>
-                </div>
-
-                <div class="chart my-3">
-                  <canvas class="chart-canvas" id="overviewChart"></canvas>
-                </div>
-                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="allocations-tab" data-toggle="tab" href="#allocations" role="tab" aria-controls="allocations" aria-selected="true">Allocations</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
-                  </li>
-                </ul>
-              </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .header-body -->
-
-        </div>
-      </div> <!-- / .header -->
-
-      <!-- CARDS -->
-      <div class="container-fluid">
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="allocations" role="tabpanel" aria-labelledby="allocations-tab">
-            <div class="row">
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-2">
-                            Fund Title
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2">
-                            $3,000.00
-                          </span>
-
-                          <!-- Badge -->
-                          <span class="badge badge-soft-success mt-n1">
-                            +3.5%
-                          </span>
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
+              </div> <!-- / .col -->
+            </div>
+            <div class="row justify-content-center mb-n4 mt-n6 mt-lg-0">
+              <div class="col-10 col-lg-8 d-flex justify-content-center align-items-center" style="min-height: 360px;background-image: url(assets/img/illustrations/15MacbookPro.svg);background-repeat: no-repeat;background-size: contain;background-position:center;">
+                <a class="btn btn-lg btn-white-opacity btn-rounded-circle align-items-center d-flex justify-content-center lift mx-auto" href="#" data-toggle="modal" data-target="#video" data-thevideo="https://www.youtube.com/embed/I_DJoK-SGj4">
+                  <i class="fe fe-play display-3 ml-2"></i>
                 </a>
-
               </div>
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-2">
-                            Fund Title
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2">
-                            $3,000.00
-                          </span>
-
-                          <!-- Badge -->
-                          <span class="badge badge-soft-success mt-n1">
-                            +3.5%
-                          </span>
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-            </div> <!-- / .row -->
-            <div class="row">
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-2">
-                            Fund Title
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2">
-                            $3,000.00
-                          </span>
-
-                          <!-- Badge -->
-                          <span class="badge badge-soft-success mt-n1">
-                            +3.5%
-                          </span>
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-            </div> <!-- / .row -->
+            </div>
+            </div> <!-- / .header-body -->
           </div>
-          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
-            <div class="row">
-              <div class="col-12">
-
-                <!-- Goals -->
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
-
-                        <!-- Title -->
-                        <h4 class="card-header-title">
-                          Deposit & Withdraw History
-                        </h4>
-
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
-                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
-                    <table class="table table-sm table-nowrap card-table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-type">
-                              Type
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
-                              Amount (USD)
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-allocation">
-                              Allocation
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
-                              Timestamp
-                            </a>
-                          </th>
-                          <th class="text-center">
-                            <a href="#" class="text-secondary">
-                              Transaction
-                            </a>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="list">
-                        <tr>
-                          <td class="tx-type">
-                            <i class="fe fe-download mr-2"></i> Deposit
-                          </td>
-                          <td class="type-amount text-success">
-                            $300.00
-                          </td>
-                          <td class="type-allocation">
-                            Fund title
-                          </td>
-                          <td class="tx-timestamp">
-                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
-                          </td>
-                          <td class="text-center">
-                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="tx-type">
-                            <i class="fe fe-upload mr-2"></i> Withdraw
-                          </td>
-                          <td class="type-amount">
-                            -$300.00
-                          </td>
-                          <td class="type-allocation">
-                            Fund title
-                          </td>
-                          <td class="tx-timestamp">
-                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
-                          </td>
-                          <td class="text-center">
-                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
-        </div>
-        <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+        </div> <!-- / .header -->
       </div>
 
+      <!-- CARDS -->
+      <div class="container mt-n7 mb-6 mb-lg-7">
+        <div class="row justify-content-center mb-6">
+          <div class="col-12 col-lg-8 text-center">
+            <h6 class="text-uppercase text-soft-purple mb-4">
+              Get started
+            </h6>
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-6 col-lg">
+                <a href="#" data-toggle="modal" data-target="#modal-onboarding-invest">
+                  <div class="card bg-purple lift" style="min-height: 134px">
+                    <div class="card-body text-center p-3">
+                      <div class="avatar mb-4">
+                        <span class="avatar-title rounded-circle bg-warning"><i class="fe fe-dollar-sign text-dark"></i></span>
+                      </div>
+                      <h2 class="h4 text-white mb-0">
+                        Invest on PeakDeFi
+                      </h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-lg">
+                <a class="lift" href="#" data-toggle="modal" data-target="#modal-onboarding-staking">
+                  <div class="card bg-violet lift" style="min-height: 134px">
+                    <div class="card-body p-3 text-center">
+                      <div class="avatar mb-4">
+                        <span class="avatar-title rounded-circle bg-success"><i class="fe fe-award text-dark"></i></span>
+                      </div>
+                      <h2 class="h4 text-white mb-0">
+                        Earn staking rewards
+                      </h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="text-center text-secondary align-items-center mb-0 small">PeakDeFi smart contracts are audited and secured by <a class="text-white" href="">QuantStamp & Open Zeppelin</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- CARDS -->
+      <div class="container mb-6 mb-lg-7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h2 class="display-3 d-none d-lg-block">How does it work?</h2>
+            <h2 class="display-4 d-block d-lg-none">How does it work?</h2>
+            <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-5">
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="row">
+              <div class="col-auto">
+                <span class="display-1 text-white">1</span>
+              </div>
+              <div class="col">
+                <h3 class="h2 mb-2">Headline</h3>
+                <p class="lead text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="row">
+              <div class="col-auto">
+                <span class="display-1 text-white">2</span>
+              </div>
+              <div class="col">
+                <h3 class="h2 mb-2">Headline</h3>
+                <p class="lead text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="row">
+              <div class="col-auto">
+                <span class="display-1 text-white">3</span>
+              </div>
+              <div class="col">
+                <h3 class="h2 mb-2">Headline</h3>
+                <p class="lead text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="text-center">Ready to join PeakDeFi?</h2>
+            </h6>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-6">
+          <div class="col-auto">
+            <a class="btn btn-white rounded-xl lift" href="" target="_blank">
+              Launch App <i class="fe fe-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-6 mb-lg-7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h2 class="display-3 d-none d-lg-block">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none">Headline</h2>
+            <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-0 mb-lg-6">
+          <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+            <h3 class="h1">Headline</h3>
+            <p class="lead text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 mb-5 mb-lg-0 order-first order-lg-last">
+            <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-0 mb-lg-6">
+          <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+            <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
+          </div>
+          <div class="col-12 col-lg-5 mb-6 mb-lg-0">
+            <h3 class="h1">Headline</h3>
+            <p class="lead text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-5 mb-lg-6">
+          <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+            <h3 class="h1">Headline</h3>
+            <p class="lead text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 mb-5 mb-lg-0 order-first order-lg-last">
+            <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
+          </div>
+        </div>
+      </div>
+      <div class="container mb-6 mb-lg-7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h2 class="display-3 d-none d-lg-block">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none">Headline</h2>
+            <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-5">
+            <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
+            <h3 class="h1">Headline</h3>
+            <p class="lead text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col-12 col-lg-5 offset-lg-1">
+            <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
+            <h3 class="h1">Headline</h3>
+            <p class="lead text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container pb-6">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h2 class="display-3 d-none d-lg-block">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none">Headline</h2>
+            <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <a class="btn btn-white rounded-xl lift" href="" target="_blank">
+              Launch App <i class="fe fe-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div><!-- / .main-content -->
+    <footer class="bg-black pt-5 pt-lg-6 pb-4">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12 col-lg-auto mr-auto mb-5 mb-lg-0">
+            <div class="avatar">
+              <span class="avatar-title rounded-circle bg-white text-dark">PD</span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2 mb-5 mb-lg-0">
+            <h6 class="text-uppercase text-secondary mb-2">
+              Products
+            </h6>
+            <nav class="nav flex-column">
+              <a class="nav-link text-white pl-0" href="#">Nav items</a>
+              <a class="nav-link text-white pl-0" href="#">Nav items</a>
+            </nav>
+          </div>
+          <div class="col-12 col-lg-2 mb-5 mb-lg-0">
+            <h6 class="text-uppercase text-secondary mb-2">
+              Resources
+            </h6>
+            <nav class="nav flex-column">
+              <a class="nav-link text-white pl-0" href="" title="Get answers at the help centre">Help Centre</a>
+              <a class="nav-link text-white pl-0" href="">Security audits</a>
+              <a class="nav-link text-white pl-0" href="" target="_blank">Twitter</a>
+              <a class="nav-link text-white pl-0" href="" target="_blank">Discord</a>
+              <a class="nav-link text-white pl-0" href="" target="_blank">Telegram</a>
+              <a class="nav-link text-white pl-0" href="" target="_blank">Github</a>
+              <a class="nav-link text-white pl-0" href="" target="_blank">Medium</a>
+            </nav>
+          </div>
+          <div class="col-12 col-lg-2 mb-5 mb-lg-0">
+            <h6 class="text-uppercase text-secondary mb-2">
+              Company
+            </h6>
+            <nav class="nav flex-column">
+              <a class="nav-link text-white pl-0" href="">Careers</a>
+              <a class="nav-link text-white pl-0" href="">Terms</a>
+              <a class="nav-link text-white pl-0" href="mailto:hello@peakdefi.com">hello@peakdefi.com</a>
+            </nav>
+          </div>
+        </div>
+        <!-- Divider -->
+        <hr class="my-4 my-lg-3">
+        <div class="row justify-content-center justify-content-lg-between">
+          <div class="col-auto mb-4 mb-lg-0">
+            <span class="text-secondary">© 2020 <a class="text-secondary" href="">Peak Tech.</a></span>
+          </div>
+          <div class="col-auto mb-4 mb-lg-0">
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-link dropdown-toggle p-0 d-flex align-items-center text-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Change region
+              </button>
+              <div class="dropdown-menu">
+                <a href="" class="dropdown-item text-white">de: Deutsch (German)</a>
+                <a href="" class="dropdown-item text-white">en: English</a>
+                <a href="" class="dropdown-item text-white">es: Español (Spanish)</a>
+                <a href="" class="dropdown-item text-white">fr: Français (French)</a>
+                <a href="" class="dropdown-item text-white">hr: Hrvatski (Croatian)</a>
+                <a href="" class="dropdown-item text-white">it: Italiana (Italian)</a>
+                <a href="" class="dropdown-item text-white">ja: 日本 (Japanese)</a>
+                <a href="" class="dropdown-item text-white">ko: 한국어 (Korean)</a>
+                <a href="" class="dropdown-item text-white">zh: 普通话 (Mandarin)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
 
     <!-- JAVASCRIPT
     ================================================== -->

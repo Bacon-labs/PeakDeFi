@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "PeakDeFi"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-fluid">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-end">
+              <div class="col">
+                <!-- Title -->
+                <h1 class="header-title display-3 mt-3">
+                  $21,000.00
+                </h1>
+                <!-- Pretitle -->
+                <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-4">
+                  Balance in
+                  <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    USD <i class="fe fe-chevron-down text-secondary"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                    <a class="dropdown-item" href="#!">EUR</a>
+                    <a class="dropdown-item" href="#!">BTC</a>
+                    <a class="dropdown-item" href="#!">ETH</a>
+                  </div>
+                </div>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
+                  <i class="fe fe-download mr-2"></i> Buy shares
+                </a>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
+                  <i class="fe fe-upload mr-2"></i> Sell shares
+                </a>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                    <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
+                  </div>
+                  <div class="col-auto">
+                    <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                      <label class="btn btn-white btn-sm col">
+                        <input type="radio" name="navColor" id="" value=""> 1W
+                      </label>
+                      <label class="btn btn-white btn-sm col ml-2 active">
+                        <input type="radio" name="navColor" id="" value=""> 1M
+                      </label>
+                      <label class="btn btn-white btn-sm col ml-2">
+                        <input type="radio" name="navColor" id="" value=""> 1A
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chart my-3">
+                  <canvas class="chart-canvas" id="overviewChart"></canvas>
+                </div>
+                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="allocations-tab" data-toggle="tab" href="#allocations" role="tab" aria-controls="allocations" aria-selected="true">Allocations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="allocations" role="tabpanel" aria-labelledby="allocations-tab">
+            <div class="row">
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-6">
+
+                <!-- fund  -->
+                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col mb-3 mb-lg-0">
+
+                          <!-- Title -->
+                          <h6 class="text-uppercase text-secondary mb-2">
+                            Fund Title
+                          </h6>
+
+                          <!-- Heading -->
+                          <span class="h2 text-white mb-0 mr-2">
+                            $3,000.00
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt-n1">
+                            +3.5%
+                          </span>
+                        </div>
+                        <div class="col-auto">
+
+                          <div class="avatar avatar-sm">
+                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Goals -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Deposit & Withdraw History
+                        </h4>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                    <table class="table table-sm table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-type">
+                              Type
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+                              Amount (USD)
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-allocation">
+                              Allocation
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
+                              Timestamp
+                            </a>
+                          </th>
+                          <th class="text-center">
+                            <a href="#" class="text-secondary">
+                              Transaction
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td class="tx-type">
+                            <i class="fe fe-download mr-2"></i> Deposit
+                          </td>
+                          <td class="type-amount text-success">
+                            $300.00
+                          </td>
+                          <td class="type-allocation">
+                            Fund title
+                          </td>
+                          <td class="tx-timestamp">
+                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                          </td>
+                          <td class="text-center">
+                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tx-type">
+                            <i class="fe fe-upload mr-2"></i> Withdraw
+                          </td>
+                          <td class="type-amount">
+                            -$300.00
+                          </td>
+                          <td class="type-allocation">
+                            Fund title
+                          </td>
+                          <td class="tx-timestamp">
+                            <time datetime="2018-10-24">01/14/2020, 11:37:07 AM</time>
+                          </td>
+                          <td class="text-center">
+                            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507"><i class="fe fe-external-link"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
