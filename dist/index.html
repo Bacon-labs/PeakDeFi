@@ -41,20 +41,24 @@
                       <div class="header-body">
                         <div class="row align-items-end">
                           <div class="col">
-                            <div class="row justify-content-between align-items-center mb-5">
-                              <div class="col-8 col-lg">
+                            <div class="row justify-content-between align-items-center mb-4">
+                              <div class="col">
                                 <!-- Pretitle -->
-                                <div class="text-secondary mb-2">
-                                  Fund title allocation &bull; USD
+                                <div class="text-secondary">
+                                  Fund 1 &bull; Value of holdings &bull; USD
                                 </div>
                                 <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
-                                  $3,000.00
+                                  $10,500.00
                                 </h1>
-                                <h1 class="display-4 mt-3 mb-0 d-block d-lg-none">
-                                  $3,000.00
+                                <h1 class="display-4 mt-3 mb-1 d-block d-lg-none">
+                                  $10,500.00
                                 </h1>
+                                <!-- Pretitle -->
+                                <div class="small">
+                                  Total holdings: 1,050.0000 PDF1
+                                </div>
                               </div>
-                              <div class="col-4 col-lg-auto">
+                              <div class="col-auto">
 
                                 <div class="avatar avatar-sm d-flex d-lg-none">
                                   <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
@@ -66,39 +70,16 @@
                               </div>
                             </div>
                             <!-- Button -->
-                            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white lift mb-5 mr-3">
-                              <i class="fe fe-download mr-2"></i> Buy shares
+                            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-white lift mb-4 mr-3">
+                              <i class="fe fe-plus h3 mr-2 align-bottom"></i> Buy
                             </a>
                             <!-- Button -->
-                            <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-sm btn-white lift mb-5">
-                              <i class="fe fe-upload mr-2"></i> Sell shares
+                            <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-white lift mb-4">
+                              <i class="fe fe-minus h3 mr-2 align-bottom"></i> Sell
                             </a>
-                            <div class="row">
-                              <div class="col">
-                                <h2 class="text-success h1 d-none d-lg-block"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
-                                <h2 class="text-success h2 d-block d-lg-none"><i class="fe fe-arrow-up-right"></i> 27% (+$4,330.00)</h2>
-                              </div>
-                              <div class="col-auto">
-                                <div class="btn-group-toggle d-flex" data-toggle="buttons">
-                                  <label class="btn btn-white btn-sm col">
-                                    <input type="radio" name="navColor" id="" value=""> 1W
-                                  </label>
-                                  <label class="btn btn-white btn-sm col ml-2 active">
-                                    <input type="radio" name="navColor" id="" value=""> 1M
-                                  </label>
-                                  <label class="btn btn-white btn-sm col ml-2">
-                                    <input type="radio" name="navColor" id="" value=""> 1A
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="chart my-3">
-                              <canvas class="chart-canvas" id="overviewChart1"></canvas>
-                            </div>
                             <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
                               <li class="nav-item">
-                                <a class="nav-link active text-center font-weight-bold h3 mb-0" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="true">Stats</a>
+                                <a class="nav-link active text-center font-weight-bold h3 mb-0" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="true">Overview</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link text-center font-weight-bold h3 mb-0" id="Fundtransactions-tab" data-toggle="tab" href="#Fundtransactions" role="tab" aria-controls="Fundtransactions" aria-selected="false">Transactions</a>
@@ -115,6 +96,35 @@
                   <div class="container-fluid">
                     <div class="tab-content mb-5" id="myTabContent">
                       <div class="tab-pane fade show active" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                        <div class="row">
+                          <div class="col-12 col-lg">
+                            <div class="text-secondary mb-2">
+                              Share price &bull; USD
+                            </div>
+                            <h2 class="h1 d-none d-lg-block">$10.0000 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 27.45% today</span></h2>
+                            <h2 class="h2 d-block d-lg-none">10.0000 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 27.45% today</span></h2>
+                          </div>
+                          <div class="col-12 mb-4 mb-lg-0 col-lg-auto">
+                            <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                              <label class="btn btn-white btn-sm col active">
+                                <input type="radio" name="navColor" id="" value=""> 1D
+                              </label>
+                              <label class="btn btn-white btn-sm col ml-2">
+                                <input type="radio" name="navColor" id="" value=""> 1W
+                              </label>
+                              <label class="btn btn-white btn-sm col ml-2">
+                                <input type="radio" name="navColor" id="" value=""> 1M
+                              </label>
+                              <label class="btn btn-white btn-sm col ml-2">
+                                <input type="radio" name="navColor" id="" value=""> 1A
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="chart my-4">
+                          <canvas class="chart-canvas" id="overviewChart1"></canvas>
+                        </div>
                         <div class="row">
                           <div class="col-12 col-lg-6">
 
@@ -228,7 +238,7 @@
 
                                     <!-- Title -->
                                     <h4 class="card-header-title">
-                                      Deposit & Withdraw History
+                                      Transactions history
                                     </h4>
 
                                   </div>
@@ -263,7 +273,7 @@
                                   <tbody class="list">
                                     <tr>
                                       <td class="tx-type">
-                                        <i class="fe fe-download mr-2"></i> Deposit
+                                        <i class="fe fe-download mr-2"></i> Buy
                                       </td>
                                       <td class="type-amount text-success">
                                         $300.00
@@ -277,7 +287,7 @@
                                     </tr>
                                     <tr>
                                       <td class="tx-type">
-                                        <i class="fe fe-upload mr-2"></i> Withdraw
+                                        <i class="fe fe-upload mr-2"></i> Sell
                                       </td>
                                       <td class="type-amount">
                                         -$300.00
@@ -307,14 +317,6 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="px-0 border-0 text-white">
-                              <strong>Share price (USD)</strong>
-                            </td>
-                            <td class="px-0 text-right text-white border-0">
-                              $10.00
-                            </td>
-                          </tr>
-                          <tr>
                             <td class="px-0 text-white border-0">
                               <strong>Management fee</strong>
                             </td>
@@ -340,22 +342,24 @@
                           </tr>
                           <tr>
                             <td class="px-0 text-white border-0">
-                              <strong>PEAK tokens staked</strong>
+                              <strong>Fund's cycle</strong><br>
+                              <small class="text-white">Management phase</small><br>
+                              <small class="text-white">Investor sell phase</small><br>
                             </td>
                             <td class="px-0 text-white text-right border-0">
-                              1,000.0000 PEAK
+                              30 days <br>
+                              <small class="text-white">27 days</small><br>
+                              <small class="text-white">3 days</small>
                             </td>
                           </tr>
-                          <td class="px-0 text-white border-0">
-                            <strong>Fund's cycle</strong><br>
-                            <small class="text-white">Management phase</small><br>
-                            <small class="text-white">Investor withdrawal phase</small><br>
-                          </td>
-                          <td class="px-0 text-white text-right border-0">
-                            30 days <br>
-                            <small class="text-white">27 days</small><br>
-                            <small class="text-white">3 days</small>
-                          </td>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>Time left before sell allowed</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              1d 12h 24s
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -372,8 +376,10 @@
                         <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <h3>Question</h3>
                         <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -392,14 +398,6 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="px-0 border-0 text-dark">
-                              <strong>Share price (USD)</strong>
-                            </td>
-                            <td class="px-0 text-right text-dark border-0">
-                              $10.00
-                            </td>
-                          </tr>
-                          <tr>
                             <td class="px-0 text-dark border-0">
                               <strong>Management fee</strong>
                             </td>
@@ -425,22 +423,24 @@
                           </tr>
                           <tr>
                             <td class="px-0 text-dark border-0">
-                              <strong>PEAK tokens staked</strong>
+                              <strong>Fund's cycle</strong><br>
+                              <small>Management phase</small><br>
+                              <small>Investor sell phase</small><br>
                             </td>
                             <td class="px-0 text-dark text-right border-0">
-                              1,000.0000 PEAK
+                              30 days <br>
+                              <small>27 days</small><br>
+                              <small>3 days</small>
                             </td>
                           </tr>
-                          <td class="px-0 text-dark border-0">
-                            <strong>Fund's cycle</strong><br>
-                            <small class="text-dark">Management phase</small><br>
-                            <small class="text-dark">Investor withdrawal phase</small><br>
-                          </td>
-                          <td class="px-0 text-dark text-right border-0">
-                            30 days <br>
-                            <small class="text-dark">27 days</small><br>
-                            <small class="text-dark">3 days</small>
-                          </td>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Time left before sell allowed</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              1d 12h 24s
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -507,6 +507,11 @@
                         </div>
                       </div>
                       <small class="form-text text-secondary mb-4">100.0000 ETH available</small>
+                      <div class="form-group">
+                        <label>PEAK tokens to stake</label>
+                        <input type="text" class="form-control form-control-lg mb-2" value="0.00" aria-label="" aria-describedby="">
+                        <small class="form-text text-secondary mb-4">0.0000 PEAK available &bull; <a href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">Buy</a></small>
+                      </div>
                       <div class="table-responsive d-block d-lg-none mb-4">
                         <table class="table mb-0">
                           <thead>
@@ -534,11 +539,9 @@
                             <tr>
                               <td class="px-0 text-white border-0">
                                 <strong>PEAK tokens to stake</strong><br>
-                                <small class="text-white">Available balance &bull; <a href="#" target="_blank">Buy</a></small>
                               </td>
                               <td class="px-0 text-white text-right border-0">
-                                1,000.0000 PEAK <br>
-                                <small class="text-white">2,000.0000 PEAK</small>
+                                1,000.0000
                               </td>
                             </tr>
                             <tr>
@@ -611,8 +614,10 @@
                       <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                       <h3>Question</h3>
                       <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
                     </div>
                   </div>
+
                   <!-- Text -->
                   <p class="text-secondary small">
                     By tapping or clicking 'Confirm', you accept the following terms of service. You also agree that your purchase will be available immediately.
@@ -650,18 +655,235 @@
                           </tr>
                           <tr>
                             <td class="px-0 text-dark border-0">
-                              <strong>PEAK tokens to deposit</strong><br>
-                              <small class="text-secondary">Available balance &bull; <a href="#" target="_blank">Buy</a></small>
+                              <strong>PEAK tokens to deposit</strong>
                             </td>
                             <td class="px-0 text-dark text-right border-0">
-                              1,000.0000 PEAK <br>
-                              <small class="text-secondary">2,000.0000 PEAK</small>
+                              1,000.0000
                             </td>
                           </tr>
                           <tr>
                             <td class="px-0 border-top border-top-1 border-dark text-dark"><strong>Total cost</strong></td>
                             <td colspan="2" class="px-0 text-right border-top border-top-1 border-dark text-dark">
                               <span class="h3">30.000000 ETH</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: modal-stake-peak -->
+    <!-- IDEA: modal modal-stake-peak -->
+    <div class="modal fade fixed-right" id="modal-stake-peak" tabindex="-1" role="dialog" aria-labelledby="modal-stake-peak" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center my-5">
+                    Stake Peak
+                  </h1>
+
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label>Amount to stake</label>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                          <div class="input-group-append">
+                            <button class="btn border" type="button">Max</button>
+                          </div>
+                        </div>
+                        <small class="form-text text-secondary mb-4">1,000.0000 PEAK available &bull; <a href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">Buy</a></small>
+                      </div>
+                      <div class="form-group">
+                        <label>Lock-up time</label>
+                        <div class="input-group input-group-lg mb-2">
+                          <input type="text" class="form-control border-right-0 pr-0" placeholder="0" aria-label="lockup" id="lockup">
+                          <div class="input-group-append">
+                            <span class="input-group-text rounded-right border-left-0" id="lockup">days</span>
+                          </div>
+                        </div>
+                        <small class="form-text text-secondary mb-4">Min. x days</small>
+                      </div>
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0">
+                                <strong>Bigger Bonus</strong>
+                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                  <i class="fe fe-info h4"></i>
+                                </button>
+                              </td>
+                              <td class="px-0 text-right border-0">
+                                0.010000%
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0">
+                                <strong>Longer Bonus</strong>
+                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                  <i class="fe fe-info h4"></i>
+                                </button>
+                              </td>
+                              <td class="px-0 text-right border-0">
+                                36.48%
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0">
+                                <strong>Referral bonus</strong>
+                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                  <i class="fe fe-info h4"></i>
+                                </button>
+                              </td>
+                              <td class="px-0 text-right border-0">
+                                3.00%
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0">
+                                <strong>APY rewards</strong>
+                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                  <i class="fe fe-info h4"></i>
+                                </button>
+                              </td>
+                              <td class="px-0 text-right border-0">
+                                36.49%
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0">
+                                <strong>PEAK rewards</strong><br>
+                              </td>
+                              <td class="px-0 text-right border-0">
+                                364.902086
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-top border-top-1 border-white "><strong>Total value after staking</strong></td>
+                              <td colspan="2" class="px-0 text-right border-top border-top-1 border-white">
+                                <span class="h3">1364.902086 PEAK</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="rewards.html">Stake</a>
+                    </div>
+                  </div>
+
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
+                    </div>
+                  </div>
+
+                  <!-- Text -->
+                  <p class="text-secondary small">
+                    By tapping or clicking 'Stake', you accept the following terms of service.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0 text-dark">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>Bigger Bonus</strong>
+                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fe fe-info h4"></i>
+                              </button>
+                            </td>
+                            <td class="px-0 text-right border-0">
+                              0.010000%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>Longer Bonus</strong>
+                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fe fe-info h4"></i>
+                              </button>
+                            </td>
+                            <td class="px-0 text-right border-0">
+                              36.48%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>Referral bonus</strong>
+                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fe fe-info h4"></i>
+                              </button>
+                            </td>
+                            <td class="px-0 text-right border-0">
+                              3.00%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>APY rewards</strong>
+                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fe fe-info h4"></i>
+                              </button>
+                            </td>
+                            <td class="px-0 text-right border-0">
+                              36.49%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>PEAK rewards</strong><br>
+                            </td>
+                            <td class="px-0 text-right border-0">
+                              364.902086
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-top border-top-1 border-secondary"><strong>Total value after staking</strong></td>
+                            <td colspan="2" class="px-0 text-right border-top border-top-1 border-secondary">
+                              <span class="h3">1364.902086 PEAK</span>
                             </td>
                           </tr>
                         </tbody>
@@ -764,7 +986,7 @@
                                 <strong>PEAK tokens to redeem</strong>
                               </td>
                               <td class="px-0 text-white text-right border-0">
-                                1,000.0000 PEAK
+                                1,000.0000
                               </td>
                             </tr>
                             <tr>
@@ -822,7 +1044,6 @@
                       </script>
                     </div>
                   </div>
-
                   <h2>FAQ</h2>
                   <div class="card card-inactive mb-5">
                     <div class="card-body">
@@ -836,8 +1057,10 @@
                       <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                       <h3>Question</h3>
                       <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
                     </div>
                   </div>
+
                   <!-- Text -->
                   <p class="text-secondary small">
                     By tapping or clicking 'Confirm', you accept the following terms of service. You also agree that your purchase will be available immediately.
@@ -878,7 +1101,7 @@
                               <strong>PEAK tokens to redeem</strong>
                             </td>
                             <td class="px-0 text-dark text-right border-0">
-                              1,000.0000 PEAK
+                              1,000.0000
                             </td>
                           </tr>
                           <tr>
@@ -2006,7 +2229,7 @@
             </div>
             Invest
           </a>
-          <a class="btn btn-white rounded-xl d-flex align-items-center lift" href="https://bacon-labs.github.io/PeakDeFi/dist/dashboard.html" target="_blank">
+          <a class="btn btn-white rounded-xl d-flex align-items-center lift" href="https://bacon-labs.github.io/PeakDeFi/dist/rewards.html" target="_blank">
             <div class="avatar avatar-xs mr-2">
               <span class="avatar-title rounded-circle bg-success"><i class="fe fe-award text-dark"></i></span>
             </div>
@@ -2019,7 +2242,7 @@
 
     <!-- MAIN CONTENT
     ================================================== -->
-    <div class="main-content bg-light">
+    <div class="main-content bg-white">
       <div class="bg-ellipses bg-dark-curved pb-4 pb-lg-0">
 
         <!-- HEADER -->
@@ -2030,7 +2253,7 @@
             <div class="header-body border-0">
               <div class="row justify-content-center text-center">
                 <div class="col col-lg-8">
-                  <h6 class="text-uppercase text-soft-purple mb-2">
+                  <h6 class="text-uppercase mb-2">
                     Meet PeakDeFi
                   </h6>
                   <!-- Title -->
@@ -2040,7 +2263,7 @@
                   <h1 class="header-title display-4 mt-4 mb-4 d-block d-lg-none">
                     An assets management protocol built on the Ethereum blockchain.
                   </h1>
-                  <p class="lead text-secondary mb-4">Get exposure to cryptocurrencies (long and short) and precious metals without the management and rebalancing hurdles.</p>
+                  <p class="lead text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <div class="row my-5 flex justify-content-center">
                     <div class="col-auto mb-4 mb-lg-0">
                       <!-- Title -->
@@ -2056,7 +2279,7 @@
                     <div class="col-auto">
                       <!-- Title -->
                       <h6 class="text-uppercase text-white mb-2">
-                        Current rewards pool
+                        Rewards distributed
                       </h6>
 
                       <!-- Heading -->
@@ -2083,7 +2306,7 @@
       <div class="container mt-n7 mb-6 mb-lg-7">
         <div class="row justify-content-center mb-6">
           <div class="col-12 col-lg-8 text-center">
-            <h6 class="text-uppercase text-soft-purple mb-4">
+            <h6 class="text-uppercase mb-4">
               Get started
             </h6>
             <div class="row justify-content-center justify-content-lg-start">
@@ -2116,7 +2339,8 @@
                 </a>
               </div>
             </div>
-            <p class="text-center text-secondary align-items-center mb-0 small">PeakDeFi smart contracts are audited and secured by <a class="text-white" href="">QuantStamp & Open Zeppelin</a></p>
+            <p class="text-center text-secondary">I'm ready to <a href="./dashboard.html">connect</a></p>
+            <p class="text-center text-secondary align-items-center mb-0 small">PeakDeFi smart contracts are audited and secured by <a href="">QuantStamp & Open Zeppelin</a></p>
           </div>
         </div>
       </div>
@@ -2124,8 +2348,8 @@
       <div class="container mb-6 mb-lg-7">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8 text-center">
-            <h2 class="display-3 d-none d-lg-block">How does it work?</h2>
-            <h2 class="display-4 d-block d-lg-none">How does it work?</h2>
+            <h2 class="display-3 d-none d-lg-block text-dark">How does it work?</h2>
+            <h2 class="display-4 d-block d-lg-none  text-dark">How does it work?</h2>
             <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
@@ -2133,10 +2357,10 @@
           <div class="col-12 col-lg-4 mb-4 mb-lg-0">
             <div class="row">
               <div class="col-auto">
-                <span class="display-1 text-white">1</span>
+                <span class="display-1 text-secondary">1</span>
               </div>
               <div class="col">
-                <h3 class="h2 mb-2">Headline</h3>
+                <h3 class="h2 mb-2 text-dark">Headline</h3>
                 <p class="lead text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -2146,10 +2370,10 @@
           <div class="col-12 col-lg-4 mb-4 mb-lg-0">
             <div class="row">
               <div class="col-auto">
-                <span class="display-1 text-white">2</span>
+                <span class="display-1 text-dark">2</span>
               </div>
               <div class="col">
-                <h3 class="h2 mb-2">Headline</h3>
+                <h3 class="h2 mb-2 text-secondary">Headline</h3>
                 <p class="lead text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -2159,10 +2383,10 @@
           <div class="col-12 col-lg-4">
             <div class="row">
               <div class="col-auto">
-                <span class="display-1 text-white">3</span>
+                <span class="display-1 text-secondary">3</span>
               </div>
               <div class="col">
-                <h3 class="h2 mb-2">Headline</h3>
+                <h3 class="h2 mb-2 text-dark">Headline</h3>
                 <p class="lead text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -2172,8 +2396,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-lg-6">
-            <h2 class="text-center">Ready to join PeakDeFi?</h2>
-            </h6>
+            <h2 class="text-center text-dark">Ready to join PeakDeFi?</h2>
           </div>
         </div>
         <div class="row justify-content-center mb-6">
@@ -2187,14 +2410,14 @@
       <div class="container mb-6 mb-lg-7">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8 text-center">
-            <h2 class="display-3 d-none d-lg-block">Headline</h2>
-            <h2 class="display-4 d-block d-lg-none">Headline</h2>
+            <h2 class="display-3 d-none d-lg-block text-dark">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none text-dark">Headline</h2>
             <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="row justify-content-center align-items-center mb-0 mb-lg-6">
           <div class="col-12 col-lg-5 mb-5 mb-lg-0">
-            <h3 class="h1">Headline</h3>
+            <h3 class="h1 text-dark">Headline</h3>
             <p class="lead text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -2208,7 +2431,7 @@
             <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
           </div>
           <div class="col-12 col-lg-5 mb-6 mb-lg-0">
-            <h3 class="h1">Headline</h3>
+            <h3 class="h1 text-dark">Headline</h3>
             <p class="lead text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -2216,7 +2439,7 @@
         </div>
         <div class="row justify-content-center align-items-center mb-5 mb-lg-6">
           <div class="col-12 col-lg-5 mb-5 mb-lg-0">
-            <h3 class="h1">Headline</h3>
+            <h3 class="h1 text-dark">Headline</h3>
             <p class="lead text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -2229,22 +2452,22 @@
       <div class="container mb-6 mb-lg-7">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8 text-center">
-            <h2 class="display-3 d-none d-lg-block">Headline</h2>
-            <h2 class="display-4 d-block d-lg-none">Headline</h2>
+            <h2 class="display-3 d-none d-lg-block text-dark">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none text-dark">Headline</h2>
             <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-lg-5">
             <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
-            <h3 class="h1">Headline</h3>
+            <h3 class="h1 text-dark">Headline</h3>
             <p class="lead text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
           <div class="col-12 col-lg-5 offset-lg-1">
             <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
-            <h3 class="h1">Headline</h3>
+            <h3 class="h1 text-dark">Headline</h3>
             <p class="lead text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -2254,9 +2477,9 @@
       <div class="container pb-6">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8 text-center">
-            <h2 class="display-3 d-none d-lg-block">Headline</h2>
-            <h2 class="display-4 d-block d-lg-none">Headline</h2>
-            <p class="lead text-secondary mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 class="display-3 d-none d-lg-block text-dark">Headline</h2>
+            <h2 class="display-4 d-block d-lg-none text-dark">Headline</h2>
+            <p class="lead text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="row justify-content-center">

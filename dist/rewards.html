@@ -2313,7 +2313,6 @@
       </div>
     </nav>
 
-
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
@@ -2323,65 +2322,72 @@
         <div class="container-fluid">
 
           <!-- Body -->
-          <div class="header-body">
+          <div class="header-body border-0">
             <div class="row align-items-end">
               <div class="col">
                 <!-- Title -->
-                <h1 class="header-title display-3">
-                  $21,000.00
+                <h1 class="header-title display-3 d-none d-lg-block">
+                  1,300.802086 PEAK
+                </h1>
+                <h1 class="header-title display-4 d-block d-lg-none">
+                  1,300.802086 PEAK
                 </h1>
                 <!-- Pretitle -->
                 <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
-                  Portfolio value
+                   Total balance
                   <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    USD <i class="fe fe-chevron-down text-secondary"></i>
+                    PEAK <i class="fe fe-chevron-down text-secondary"></i>
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
                     <a class="dropdown-item" href="#!">EUR</a>
+                    <a class="dropdown-item" href="#!">USD</a>
                     <a class="dropdown-item" href="#!">BTC</a>
                     <a class="dropdown-item" href="#!">ETH</a>
                   </div>
                 </div>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-white lift mb-5 mr-3">
-                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Buy
-                </a>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-white lift mb-5">
-                  <i class="fe fe-minus h3 mr-2 align-bottom"></i> Sell
-                </a>
-                <a href="rewards.html" class="alert alert-white alert-dismissible border fade show p-4 d-block" role="alert">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-auto">
-                      <div class="avatar">
-                        <span class="avatar-title rounded-circle border bg-white h2 mb-0"><i class="fe fe-dollar-sign text-primary"></i></span>
-                      </div>
-                    </div>
-                    <div class="col ml-n2 mr-auto">
+                <div class="card-deck my-4">
+                  <div class="card">
+                    <div class="card-body">
                       <!-- Title -->
-                      <h6 class="text-uppercase text-secondary mb-1">
-                        Staking rewards
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Avg. APY rewards
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
                       </h6>
 
-                      <p class="card-text text-dark lead mb-0">
-                        Earn 10.00% APY rewards with PEAK tokens
-                      </p>
-                    </div>
-                    <div class="col-auto justify-content-end">
-                      <button class="btn btn-link" type="button" name="" href="#!" data-dismiss="alert" aria-label="Close">
-                        <i class="fe fe-x h2 mb-0 text-dark"></i>
-                      </button>
+                      <!-- Heading -->
+                      <span class="h2 text-success mb-0">
+                        36.48%
+                      </span>
                     </div>
                   </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Lifetime rewards
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        1101.706258 PEAK
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#modal-stake-peak" class="btn btn-white lift mr-3">
+                  <i class="fe fe-download h3 mr-2 align-bottom"></i> Stake
                 </a>
-                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#Holdings" role="tab" aria-controls="Holdings" aria-selected="true">Holdings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
-                  </li>
-                </ul>
+                <!-- Button -->
+                <a class="btn btn-white lift" href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">
+                  <i class="fe fe-external-link h3 mr-2 align-bottom"></i> Trade on Bibox
+                </a>
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .header-body -->
@@ -2391,197 +2397,191 @@
 
       <!-- CARDS -->
       <div class="container-fluid">
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="Holdings" role="tabpanel" aria-labelledby="Holdings-tab">
-            <div class="row">
-              <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <!-- Recent activity -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
 
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Active stakes
+                    </h4>
 
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 1
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF1
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
                   </div>
-                </a>
-
+                </div> <!-- / .row -->
               </div>
-              <div class="col-6">
+              <div class="table-responsive mb-0">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th class="text-secondary">
+                        Staked PEAK
+                      </th>
+                      <th class="text-secondary">
+                        APY
+                      </th>
+                      <th class="text-secondary">
+                        Lock-up left
+                      </th>
+                      <th class="text-secondary">
+                        Unclaimed rewards
+                      </th>
+                      <th class="text-secondary">
+                        Total rewards
+                      </th>
+                      <th class="text-secondary">
+                        Total PEAK
+                      </th>
+                      <th class="text-secondary text-right">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td>
+                        1,000.000000
+                      </td>
+                      <td>
+                        36.49%
+                      </td>
+                      <td>
+                        0d 2h 24s
+                      </td>
+                      <td>
+                        4.902086
+                      </td>
+                      <td>
+                        364.902086
+                      </td>
+                      <td>
+                        1,364.902086
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button">Claim rewards</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        1,000.000000
+                      </td>
+                      <td>
+                        36.49%
+                      </td>
+                      <td>
+                        0d 2h 24s
+                      </td>
+                      <td>
+                        0.000000
+                      </td>
+                      <td>
+                        364.902086
+                      </td>
+                      <td>
+                        1,364.902086
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" disabled>Claim rewards</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2,000.000000
+                      </td>
+                      <td>
+                        36.48%
+                      </td>
+                      <td>
+                        0d 0h 0s
+                      </td>
+                      <td>
+                        0.000000
+                      </td>
+                      <td>
+                        736.804172
+                      </td>
+                      <td>
+                        2,736.804172
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-sm btn-danger" type="button" name="button">Defund</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
+            <!-- Recent activity -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
 
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 2
-                          </h6>
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Recent activity
+                    </h4>
 
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF2
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
                   </div>
-                </a>
-
+                </div> <!-- / .row -->
               </div>
-            </div> <!-- / .row -->
-            <div class="row">
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 3
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $0.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            0.0000 PDF3
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
+              <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;tx-date&quot;, &quot;tx-details&quot;, &quot;tx-amount&quot;]}">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="tx-date">
+                          Date
+                        </a>
+                      </th>
+                      <th data-sort="tx-details">
+                        <a href="#" class="text-secondary list-sort">
+                          Details
+                        </a>
+                      </th>
+                      <th class="text-right">
+                        <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+                          Amount
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td class="tx-date">
+                        <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
+                      </td>
+                      <td class="type-details">
+                        <h4 class="mb-2">Staked</h4>
+                        <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
+                      </td>
+                      <td class="type-amount text-right">
+                        +10.0000 PEAK
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tx-date">
+                        <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
+                      </td>
+                      <td class="type-details">
+                        <h4 class="mb-2">Defunded</h4>
+                        <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
+                      </td>
+                      <td class="type-amount text-right">
+                        -10.0000 PEAK
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div> <!-- / .row -->
+            </div>
+
           </div>
-          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
-            <div class="row">
-              <div class="col-12">
-
-                <!-- Recent activity -->
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
-
-                        <!-- Title -->
-                        <h4 class="card-header-title">
-                          Recent activity
-                        </h4>
-
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
-                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;tx-date&quot;, &quot;tx-details&quot;, &quot;tx-amount&quot;]}">
-                    <table class="table table-sm table-nowrap card-table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-date">
-                              Date
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-details">
-                              Details
-                            </a>
-                          </th>
-                          <th class="text-right">
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
-                              Amount
-                            </a>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="list">
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Bought shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            +10.0000 PDF1
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Sold shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            -10.0000 PDF1
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
-        </div>
+        </div> <!-- / .row -->
         <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
       </div>
 

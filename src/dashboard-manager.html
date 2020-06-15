@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-    "title": "PeakDeFi"
+    "title": "PeakDeFi - Dashboard manager"
     })
   </head>
   <body>
 
     @@include("partials/modals.html")
-    @@include("partials/sidebar.html")
-    @@include("partials/topbar.html")
+    @@include("partials/sidebar-manager.html")
+    @@include("partials/topbar-manager.html")
 
     <!-- MAIN CONTENT
     ================================================== -->
@@ -25,7 +25,7 @@
               <div class="col">
                 <!-- Title -->
                 <h1 class="header-title display-3">
-                  $21,000.00
+                  $210,000.00 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 3.05% today</span>
                 </h1>
                 <!-- Pretitle -->
                 <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
@@ -40,40 +40,12 @@
                   </div>
                 </div>
                 <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-white lift mb-5 mr-3">
-                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Buy
-                </a>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-white lift mb-5">
-                  <i class="fe fe-minus h3 mr-2 align-bottom"></i> Sell
-                </a>
-                <a href="rewards.html" class="alert alert-white alert-dismissible border fade show p-4 d-block" role="alert">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-auto">
-                      <div class="avatar">
-                        <span class="avatar-title rounded-circle border bg-white h2 mb-0"><i class="fe fe-dollar-sign text-primary"></i></span>
-                      </div>
-                    </div>
-                    <div class="col ml-n2 mr-auto">
-                      <!-- Title -->
-                      <h6 class="text-uppercase text-secondary mb-1">
-                        Staking rewards
-                      </h6>
-
-                      <p class="card-text text-dark lead mb-0">
-                        Earn 10.00% APY rewards with PEAK tokens
-                      </p>
-                    </div>
-                    <div class="col-auto justify-content-end">
-                      <button class="btn btn-link" type="button" name="" href="#!" data-dismiss="alert" aria-label="Close">
-                        <i class="fe fe-x h2 mb-0 text-dark"></i>
-                      </button>
-                    </div>
-                  </div>
+                <a href="#" data-toggle="modal" data-target="#invest" class="btn btn-white lift mb-5 mr-3">
+                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Make investment
                 </a>
                 <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#Holdings" role="tab" aria-controls="Holdings" aria-selected="true">Holdings</a>
+                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#funds" role="tab" aria-controls="Holdings" aria-selected="true">Funds managed</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
@@ -89,7 +61,7 @@
       <!-- CARDS -->
       <div class="container-fluid">
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="Holdings" role="tabpanel" aria-labelledby="Holdings-tab">
+          <div class="tab-pane fade show active" id="funds" role="tabpanel" aria-labelledby="funds-tab">
             <div class="row">
               <div class="col-6">
 
@@ -107,12 +79,10 @@
 
                           <!-- Heading -->
                           <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
+                            $100,000.00
                           </span>
                           <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF1
-                          </span>
+                          <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 1.05% today</span>
 
                         </div>
                         <div class="col-auto">
@@ -144,57 +114,16 @@
 
                           <!-- Heading -->
                           <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
+                            $110,000.00
                           </span>
                           <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF2
-                          </span>
+                          <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 7.45% today</span>
 
                         </div>
                         <div class="col-auto">
 
                           <div class="avatar avatar-sm">
                             <img src="@@webRoot/assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-            </div> <!-- / .row -->
-            <div class="row">
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 3
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $0.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            0.0000 PDF3
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
                           </div>
 
                         </div>

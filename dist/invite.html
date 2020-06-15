@@ -2313,7 +2313,6 @@
       </div>
     </nav>
 
-
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
@@ -2323,16 +2322,19 @@
         <div class="container-fluid">
 
           <!-- Body -->
-          <div class="header-body">
+          <div class="header-body border-0">
             <div class="row align-items-end">
               <div class="col">
                 <!-- Title -->
-                <h1 class="header-title display-3">
-                  $21,000.00
+                <h1 class="header-title display-3 d-none d-lg-block">
+                  1,300.802086 PEAK
+                </h1>
+                <h1 class="header-title display-4 d-block d-lg-none">
+                  1,300.802086 PEAK
                 </h1>
                 <!-- Pretitle -->
                 <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
-                  Portfolio value
+                   Total referral bonus value
                   <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     USD <i class="fe fe-chevron-down text-secondary"></i>
                   </button>
@@ -2342,46 +2344,129 @@
                     <a class="dropdown-item" href="#!">ETH</a>
                   </div>
                 </div>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-white lift mb-5 mr-3">
-                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Buy
-                </a>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-white lift mb-5">
-                  <i class="fe fe-minus h3 mr-2 align-bottom"></i> Sell
-                </a>
-                <a href="rewards.html" class="alert alert-white alert-dismissible border fade show p-4 d-block" role="alert">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-auto">
-                      <div class="avatar">
-                        <span class="avatar-title rounded-circle border bg-white h2 mb-0"><i class="fe fe-dollar-sign text-primary"></i></span>
+                <div class="card bg-white my-5">
+                  <div class="card-body">
+                    <h2 class="text-dark mb-2">Invite friends and you'll both get bonus</h2>
+                    <p class="text-secondary mb-4">Know someone curious about crypto? You’ll both receive bonus when they stake PEAK tokens or invest on PeakDeFi! <a href="https://gitbook.com" target="_blank">Learn more</a>.</p>
+                    <div class="row align-items-center justify-content-center mb-4">
+                      <div class="col-12">
+
+                        <!-- Title -->
+                        <h4 class="text-dark">
+                          The more you share, the more you get
+                        </h4>
+                        <div class="row align-items-center mb-1">
+                          <div class="col-auto">
+                            <h6 class="text-uppercase text-secondary mb-2">
+                              Now
+                            </h6>
+                            <!-- Value -->
+                            <div class="small mr-2 text-dark">Star</div>
+
+                          </div>
+                          <div class="col">
+
+                            <!-- Progress -->
+                            <div class="progress progress-sm" style="height: 12px;">
+                              <div class="progress-bar text-right text-dark" role="progressbar" style="width: 50%;background: linear-gradient(90deg, rgb(230, 55, 87), rgb(246, 195, 67), rgb(0, 217, 126), rgb(0, 217, 126), rgb(0, 217, 126));" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="mr-2 h6 mb-0">6,500,000 DSV</span> </div>
+                            </div>
+
+                          </div>
+                          <div class="col-auto">
+                            <h6 class="text-uppercase text-secondary mb-2">
+                              Next
+                            </h6>
+                            <!-- Value -->
+                            <div class="small mr-2 text-dark">All-star</div>
+
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col ml-n2 mr-auto">
+                    <div class="form-group">
+                      <div class="input-group input-group-lg mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Referral link</span>
+                        </div>
+                        <input type="text" id="invitationCode" class="form-control" value="https://peakdefi.com/?src=0x52B7840b735D518d3898dE3345FFd8550e62B660" aria-label="invitationCode" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-white" type="button" name="button">Copy</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card-deck my-4">
+                  <div class="card">
+                    <div class="card-body">
                       <!-- Title -->
-                      <h6 class="text-uppercase text-secondary mb-1">
-                        Staking rewards
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Staked &bull; PEAK
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
                       </h6>
 
-                      <p class="card-text text-dark lead mb-0">
-                        Earn 10.00% APY rewards with PEAK tokens
-                      </p>
-                    </div>
-                    <div class="col-auto justify-content-end">
-                      <button class="btn btn-link" type="button" name="" href="#!" data-dismiss="alert" aria-label="Close">
-                        <i class="fe fe-x h2 mb-0 text-dark"></i>
-                      </button>
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        100.0000
+                      </span>
                     </div>
                   </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Invested &bull; DAI
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        1101.7064
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Stakers commission
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        10.5354 PEAK
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Investors commission
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        20.5354 DAI
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Button -->
+                <a href="#" class="btn btn-white btn-lg lift mr-3">
+                  <i class="fe fe-dollar-sign h3 mr-2 align-bottom"></i> Redeem commission
                 </a>
-                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#Holdings" role="tab" aria-controls="Holdings" aria-selected="true">Holdings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
-                  </li>
-                </ul>
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .header-body -->
@@ -2391,197 +2476,126 @@
 
       <!-- CARDS -->
       <div class="container-fluid">
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="Holdings" role="tabpanel" aria-labelledby="Holdings-tab">
-            <div class="row">
-              <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <!-- Referrals -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
 
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                     Referrals
+                    </h4>
 
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 1
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF1
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
                   </div>
-                </a>
-
+                </div> <!-- / .row -->
               </div>
-              <div class="col-6">
-
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 2
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $10,500.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            1,050.0000 PDF2
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address-1.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
+              <div class="table-responsive mb-0"  data-list="{&quot;valueNames&quot;: [&quot;Date&quot;, &quot;type&quot;, &quot;amount&quot;, &quot;earned&quot;, &quot;user&quot;, &quot;level&quot;]}">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="date">
+                          Date
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="type">
+                          Type
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="commission">
+                          Commission
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="earned">
+                          Earned
+                        </a>
+                      </th>
+                      <th >
+                        <a href="#" class="text-secondary list-sort" data-sort="user">
+                          User
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="level">
+                          Level
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td class="date">
+                        <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
+                      </td>
+                      <td class="type">
+                        Staker
+                      </td>
+                      <td class="amount">
+                        1,000.0000
+                      </td>
+                      <td class="commission">
+                        3.0000
+                      </td>
+                      <td class="user">
+                        <a href="https://etherscan.io" target="_blank">0x52B7840b..</a>
+                      </td>
+                      <td class="level">
+                        1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="date">
+                        <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
+                      </td>
+                      <td class="type">
+                        Staker
+                      </td>
+                      <td class="amount">
+                        1,000.0000
+                      </td>
+                      <td class="commission">
+                        1.0000
+                      </td>
+                      <td class="user">
+                        <a href="https://etherscan.io" target="_blank">0x52B7840b..</a>
+                      </td>
+                      <td class="level">
+                        3
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="date">
+                        <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
+                      </td>
+                      <td class="type">
+                        Investor
+                      </td>
+                      <td class="amount">
+                        1,000.0000
+                      </td>
+                      <td class="commission">
+                        0.0500
+                      </td>
+                      <td class="user">
+                        <a href="https://etherscan.io" target="_blank">0x52B7840b..</a>
+                      </td>
+                      <td class="level">
+                        8
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div> <!-- / .row -->
-            <div class="row">
-              <div class="col-6">
+            </div>
 
-                <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col mb-3 mb-lg-0">
-
-                          <!-- Title -->
-                          <h6 class="text-uppercase text-secondary mb-3">
-                            Fund 3
-                          </h6>
-
-                          <!-- Heading -->
-                          <span class="h2 text-white mb-0 mr-2 d-block">
-                            $0.00
-                          </span>
-                          <!-- Heading -->
-                          <span class="small text-secondary">
-                            0.0000 PDF3
-                          </span>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <div class="avatar avatar-sm">
-                            <img src="./assets/img/avatars/profiles/eth-address-2.png" class="avatar-img rounded-circle" alt="...">
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-                </a>
-
-              </div>
-            </div> <!-- / .row -->
           </div>
-          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
-            <div class="row">
-              <div class="col-12">
-
-                <!-- Recent activity -->
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
-
-                        <!-- Title -->
-                        <h4 class="card-header-title">
-                          Recent activity
-                        </h4>
-
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
-                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;tx-date&quot;, &quot;tx-details&quot;, &quot;tx-amount&quot;]}">
-                    <table class="table table-sm table-nowrap card-table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-date">
-                              Date
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-details">
-                              Details
-                            </a>
-                          </th>
-                          <th class="text-right">
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
-                              Amount
-                            </a>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="list">
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Bought shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            +10.0000 PDF1
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Sold shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            -10.0000 PDF1
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
-        </div>
+        </div> <!-- / .row -->
         <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
       </div>
 
