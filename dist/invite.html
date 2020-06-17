@@ -708,14 +708,14 @@
                         <small class="form-text text-secondary mb-4">1,000.0000 PEAK available &bull; <a href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">Buy</a></small>
                       </div>
                       <div class="form-group">
-                        <label>Lock-up time</label>
+                        <label>Lock-up in day</label>
                         <div class="input-group input-group-lg mb-2">
                           <input type="text" class="form-control border-right-0 pr-0" placeholder="0" aria-label="lockup" id="lockup">
                           <div class="input-group-append">
-                            <span class="input-group-text rounded-right border-left-0" id="lockup">days</span>
+                            <button class="btn border" type="button">Max</button>
                           </div>
                         </div>
-                        <small class="form-text text-secondary mb-4">Min. x days</small>
+                        <small class="form-text text-secondary mb-4">Min. x days / Max. 1,000 days</small>
                       </div>
                       <div class="table-responsive d-block d-lg-none mb-4">
                         <table class="table mb-0">
@@ -732,7 +732,7 @@
                                   <i class="fe fe-info h4"></i>
                                 </button>
                               </td>
-                              <td class="px-0 text-right border-0">
+                              <td class="px-0 text-right border-0 text-success">
                                 0.010000%
                               </td>
                             </tr>
@@ -743,7 +743,7 @@
                                   <i class="fe fe-info h4"></i>
                                 </button>
                               </td>
-                              <td class="px-0 text-right border-0">
+                              <td class="px-0 text-right border-0 text-success">
                                 36.48%
                               </td>
                             </tr>
@@ -754,7 +754,7 @@
                                   <i class="fe fe-info h4"></i>
                                 </button>
                               </td>
-                              <td class="px-0 text-right border-0">
+                              <td class="px-0 text-right border-0 text-success">
                                 3.00%
                               </td>
                             </tr>
@@ -765,7 +765,7 @@
                                   <i class="fe fe-info h4"></i>
                                 </button>
                               </td>
-                              <td class="px-0 text-right border-0">
+                              <td class="px-0 text-right border-0 text-success">
                                 36.49%
                               </td>
                             </tr>
@@ -773,14 +773,14 @@
                               <td class="px-0 border-0">
                                 <strong>PEAK rewards</strong><br>
                               </td>
-                              <td class="px-0 text-right border-0">
+                              <td class="px-0 text-right border-0 text-success">
                                 364.902086
                               </td>
                             </tr>
                             <tr>
                               <td class="px-0 border-top border-top-1 border-white "><strong>Total value after staking</strong></td>
                               <td colspan="2" class="px-0 text-right border-top border-top-1 border-white">
-                                <span class="h3">1364.902086 PEAK</span>
+                                <span class="h3 text-success">1364.902086 PEAK</span>
                               </td>
                             </tr>
                           </tbody>
@@ -833,7 +833,7 @@
                                 <i class="fe fe-info h4"></i>
                               </button>
                             </td>
-                            <td class="px-0 text-right border-0">
+                            <td class="px-0 text-right border-0 text-success">
                               0.010000%
                             </td>
                           </tr>
@@ -844,7 +844,7 @@
                                 <i class="fe fe-info h4"></i>
                               </button>
                             </td>
-                            <td class="px-0 text-right border-0">
+                            <td class="px-0 text-right border-0 text-success">
                               36.48%
                             </td>
                           </tr>
@@ -855,7 +855,7 @@
                                 <i class="fe fe-info h4"></i>
                               </button>
                             </td>
-                            <td class="px-0 text-right border-0">
+                            <td class="px-0 text-right border-0 text-success">
                               3.00%
                             </td>
                           </tr>
@@ -866,22 +866,35 @@
                                 <i class="fe fe-info h4"></i>
                               </button>
                             </td>
-                            <td class="px-0 text-right border-0">
+                            <td class="px-0 text-right border-0 text-success">
                               36.49%
                             </td>
                           </tr>
                           <tr>
                             <td class="px-0 border-0">
-                              <strong>PEAK rewards</strong><br>
+                              <strong>PEAK rewards</strong>
                             </td>
-                            <td class="px-0 text-right border-0">
+                            <td class="px-0 text-right border-0 text-success">
                               364.902086
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0">
+                              <strong>Referral level</strong>
+                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fe fe-info h4"></i>
+                              </button>
+                              <br>
+                              <small>Add <strong>230 PEAK</strong> to unlock level 3</small>
+                            </td>
+                            <td class="px-0 text-right border-0 text-success">
+                              2
                             </td>
                           </tr>
                           <tr>
                             <td class="px-0 border-top border-top-1 border-secondary"><strong>Total value after staking</strong></td>
                             <td colspan="2" class="px-0 text-right border-top border-top-1 border-secondary">
-                              <span class="h3">1364.902086 PEAK</span>
+                              <span class="h3 text-success">1364.902086 PEAK</span>
                             </td>
                           </tr>
                         </tbody>
@@ -2464,7 +2477,7 @@
                   </div>
                 </div>
                 <!-- Button -->
-                <a href="#" class="btn btn-white btn-lg lift mr-3">
+                <a href="#" class="btn btn-success text-dark btn-lg lift mr-3">
                   <i class="fe fe-dollar-sign h3 mr-2 align-bottom"></i> Redeem commission
                 </a>
               </div>
@@ -2486,13 +2499,221 @@
 
                     <!-- Title -->
                     <h4 class="card-header-title">
+                     Referral summary
+                    </h4>
+                  </div>
+
+                  <div class="col-auto">
+                    <a href="https://gitbook.com" target="_blank">
+                      <i class="fe fe-help-circle text-secondary"></i>
+                    </a>
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="table-responsive mb-0">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Generation level
+                      </th>
+                      <th>
+                        Total referrals
+                      </th>
+                      <th>
+                        Commission %
+                      </th>
+                      <th>
+                        Commission (DAI)
+                      </th>
+                      <th>
+                        DSV
+                      </th>
+                      <th>
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        56
+                      </td>
+                      <td>
+                        10%
+                      </td>
+                      <td>
+                        2,459.23
+                      </td>
+                      <td>
+                        2,459.23
+                      </td>
+                      <td>
+                        <i class="fe fe-check-circle text-success mr-2"></i>Active
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        4%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        3
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        2%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        7
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        0.5%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                    <tr class="text-secondary">
+                      <td>
+                        8
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        0.5%
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        0.00
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#modal-stake-peak">Activate</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Referrals -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
                      Referrals
                     </h4>
 
                   </div>
                 </div> <!-- / .row -->
               </div>
-              <div class="table-responsive mb-0"  data-list="{&quot;valueNames&quot;: [&quot;Date&quot;, &quot;type&quot;, &quot;amount&quot;, &quot;earned&quot;, &quot;user&quot;, &quot;level&quot;]}">
+              <div class="table-responsive mb-0"  data-list="{&quot;valueNames&quot;: [&quot;Date&quot;, &quot;type&quot;, &quot;amount&quot;, &quot;commission&quot;, &quot;dsv&quot;, &quot;user&quot;, &quot;level&quot;]}">
                 <table class="table table-sm table-nowrap card-table">
                   <thead>
                     <tr>
@@ -2507,13 +2728,18 @@
                         </a>
                       </th>
                       <th>
+                        <a href="#" class="text-secondary list-sort" data-sort="amount">
+                          Amount
+                        </a>
+                      </th>
+                      <th>
                         <a href="#" class="text-secondary list-sort" data-sort="commission">
                           Commission
                         </a>
                       </th>
                       <th>
-                        <a href="#" class="text-secondary list-sort" data-sort="earned">
-                          Earned
+                        <a href="#" class="text-secondary list-sort" data-sort="dsv">
+                          DSV
                         </a>
                       </th>
                       <th >
