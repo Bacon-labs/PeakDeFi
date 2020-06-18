@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "PeakDeFi - Dashboard manager"
+    })
+  </head>
+  <body>
+
+    @@include("partials/modals.html")
+    @@include("partials/sidebar-manager.html")
+    @@include("partials/topbar-manager.html")
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-fluid">
+          <!-- Body -->
+          <div class="header-body">
+            <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+              Market
+            </h1>
+            <h1 class="display-4 mt-3 d-block d-lg-none">
+              Market
+            </h1>
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="container-fluid">
+        <!-- Goals -->
+        <div class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Assets price
+                </h4>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="table-responsive mb-0">
+            <table class="table table-sm table-nowrap card-table">
+              <thead>
+                <tr>
+                  <th class="text-secondary">
+                    Asset
+                  </th>
+                  <th class="text-secondary">
+                    Price (USD)
+                  </th>
+                  <th class="text-secondary">
+                    24H
+                  </th>
+                  <th class="text-secondary">
+                    1W
+                  </th>
+                  <th class="text-secondary">
+                    1M
+                  </th>
+                  <th class="text-secondary">
+                    1Y
+                  </th>
+                  <th class="text-secondary text-right">
+
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <td>
+                    <div class="avatar avatar-sm mr-2">
+                      <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                    </div>
+                    WBTC
+                  </td>
+                  <td>
+                    102.3256
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-danger"><i class="fe fe-down-up-right"></i> 10.32%</span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerBuyPosition">Trade</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="avatar avatar-sm mr-2">
+                      <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                    </div>
+                    ETH
+                  </td>
+                  <td>
+                    102.3256
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-danger"><i class="fe fe-down-up-right"></i> 10.32%</span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerBuyPosition">Trade</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="avatar avatar-sm mr-2">
+                      <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                    </div>
+                    KNC
+                  </td>
+                  <td>
+                    102.3256
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                  </td>
+                  <td>
+                    <span class="text-danger"><i class="fe fe-down-up-right"></i> 10.32%</span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerBuyPosition">Trade</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

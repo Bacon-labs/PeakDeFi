@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "PeakDeFi - Dashboard manager"
+    })
+  </head>
+  <body>
+
+    @@include("partials/modals.html")
+    @@include("partials/sidebar-manager.html")
+    @@include("partials/topbar-manager.html")
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-fluid">
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-end">
+              <div class="col">
+                <div class="row justify-content-between align-items-center mb-2">
+                  <div class="col">
+                    <!-- Pretitle -->
+                    <div class="text-secondary">
+                      Fund 1
+                    </div>
+                    <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+                      $100,500.00
+                    </h1>
+                    <h1 class="display-4 mt-3 d-block d-lg-none">
+                      $100,500.00
+                    </h1>
+                    <!-- Pretitle -->
+                    <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
+                      Portfolio value
+                      <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        USD <i class="fe fe-chevron-down text-secondary"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                        <a class="dropdown-item" href="#!">EUR</a>
+                        <a class="dropdown-item" href="#!">BTC</a>
+                        <a class="dropdown-item" href="#!">ETH</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+
+                    <div class="avatar avatar-sm d-flex d-lg-none">
+                      <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                    </div>
+                    <div class="avatar avatar-xl d-none d-lg-flex">
+                      <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card-deck my-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Rep. tokens balance
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        101.0032 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 10.32% current cycle</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Risk taken
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        70.48%
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Est. commissions (DAI)
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        12,642.5643
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#managerBuyPosition" class="btn btn-lg btn-success text-dark lift mb-5 mr-3">
+                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Trade
+                </a>
+                <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="true">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="fundTrades-tab" data-toggle="tab" href="#fundTrades" role="tab" aria-controls="fundTrades" aria-selected="false">Trades</a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="container-fluid">
+        <div class="tab-content mb-5" id="myTabContent">
+          <div class="tab-pane fade show active" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+            <div class="row">
+              <div class="col-12 col-lg">
+                <div class="text-secondary mb-2">
+                  Share price &bull; USD
+                </div>
+                <h2 class="h1 d-none d-lg-block">$10.0000 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 27.45% today</span></h2>
+                <h2 class="h2 d-block d-lg-none">10.0000 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 27.45% today</span></h2>
+              </div>
+              <div class="col-12 mb-4 mb-lg-0 col-lg-auto">
+                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                  <label class="btn btn-white btn-sm col active">
+                    <input type="radio" name="navColor" id="" value=""> 1D
+                  </label>
+                  <label class="btn btn-white btn-sm col ml-2">
+                    <input type="radio" name="navColor" id="" value=""> 1W
+                  </label>
+                  <label class="btn btn-white btn-sm col ml-2">
+                    <input type="radio" name="navColor" id="" value=""> 1M
+                  </label>
+                  <label class="btn btn-white btn-sm col ml-2">
+                    <input type="radio" name="navColor" id="" value=""> 1A
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart my-4">
+              <canvas class="chart-canvas" id="overviewChart1"></canvas>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          PRICE CHANGE (CURRENT CYCLE)
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 text-success mb-0 mr-2">
+                          <i class="fe fe-arrow-up-right"></i> 42.17% (+$7.84)
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          APY
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 text-success mb-0 mr-2">
+                          <i class="fe fe-arrow-up-right"></i> 42.17%
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          PRICE CHANGE (Since inception)
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 text-success mb-0 mr-2">
+                          <i class="fe fe-arrow-up-right"></i> 423.00% (+$700.00)
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          Assets under management
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 mb-0 mr-2">
+                          100,500.00 DAI
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          MAX DRAWDOWN
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 text-white mb-0 mr-2">
+                          <i class="fe fe-arrow-down-right"></i>-7.39%
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <!-- stat -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mb-3 mb-lg-0">
+
+                        <!-- Title -->
+                        <h6 class="text-uppercase text-secondary mb-2">
+                          STANDARD DEVIATION
+                        </h6>
+
+                        <!-- Heading -->
+                        <span class="h2 text-white mb-0 mr-2">
+                          0.1406
+                        </span>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="tab-pane fade" id="fundTrades" role="tabpanel" aria-labelledby="fundTrades-tab">
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Goals -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Active trades
+                        </h4>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0">
+                    <table class="table table-sm table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th class="text-secondary">
+                            Asset
+                          </th>
+                          <th class="text-secondary">
+                            Type
+                          </th>
+                          <th class="text-secondary">
+                            KRO to redeem
+                          </th>
+                          <th class="text-secondary">
+                            DAI to redeem
+                          </th>
+                          <th class="text-secondary">
+                            ROI
+                          </th>
+                          <th class="text-secondary">
+                            Date
+                          </th>
+                          <th class="text-secondary text-right">
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            WBTC
+                          </td>
+                          <td>
+                            <span class="badge badge-soft-success">
+                              <span class="text-white">Long&nbsp;3x</span> • <span>Safe</span>
+                            </span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            5,002.21
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
+                          </td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            ETH
+                          </td>
+                          <td>
+                            <span class="badge badge-soft-danger">
+                              <span class="text-white">Short&nbsp;3x</span> • <span>In danger</span>
+                            </span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            5,002.21
+                          </td>
+                          <td>
+                            <span class="text-danger"><i class="fe fe-arrow-down-right"></i> -10.32%</span>
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
+                          </td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-white mr-3" type="button" name="button" data-toggle="modal" data-target="#managerTopUpPosition">Top up</button>
+                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            KNC
+                          </td>
+                          <td>
+                            <span class="badge badge-soft-primary text-white">
+                              Spot
+                            </span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            5,002.21
+                          </td>
+                          <td>
+                            <span class="text-danger"><i class="fe fe-arrow-down-right"></i> -10.32%</span>
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
+                          </td>
+                          <td class="text-right">
+                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Goals -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          History
+                        </h4>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0">
+                    <table class="table table-sm table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th class="text-secondary">
+                            Asset
+                          </th>
+                          <th class="text-secondary">
+                            Type
+                          </th>
+                          <th class="text-secondary">
+                            KRO redeemed
+                          </th>
+                          <th class="text-secondary">
+                            DAI redeemed
+                          </th>
+                          <th class="text-secondary">
+                            ROI
+                          </th>
+                          <th class="text-secondary">
+                            Date
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            WBTC
+                          </td>
+                          <td>
+                            <span class="badge badge-soft-success">
+                              <span class="text-white">Long&nbsp;3x</span>
+                            </span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            5,002.21
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            ETH
+                          </td>
+                          <td>
+                            <span class="badge badge-soft-success">
+                              <span class="text-white">Spot</span>
+                            </span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            5,002.21
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <div class="table-responsive mb-5">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th class="px-0 bg-transparent border-0">Fund details</th>
+                <th class="px-0 bg-transparent border-0 text-secondary text-right"><a href="#" target="_blank">0x52..0000</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Management fee</strong>
+                </td>
+                <td class="px-0 text-right border-0">
+                  0.1% of AUM
+                </td>
+              </tr>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Success fee</strong>
+                </td>
+                <td class="px-0 text-right border-0">
+                  20.0% of profit
+                </td>
+              </tr>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Redemption fee</strong>
+                </td>
+                <td class="px-0 text-right border-0">
+                  0%
+                </td>
+              </tr>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Fees period</strong>
+                </td>
+                <td class="px-0 text-right border-0">
+                  27 days
+                </td>
+              </tr>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Fund's cycle</strong><br>
+                  <small class="text-white">Management phase</small><br>
+                  <small class="text-white">Investor sell phase</small><br>
+                </td>
+                <td class="px-0 text-right border-0">
+                  30 days <br>
+                  <small class="text-white">27 days</small><br>
+                  <small class="text-white">3 days</small>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-0 border-0">
+                  <strong>Time left before sell allowed</strong>
+                </td>
+                <td class="px-0 text-right border-0">
+                  1d 12h 24s
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

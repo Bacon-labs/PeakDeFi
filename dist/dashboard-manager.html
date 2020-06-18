@@ -68,11 +68,11 @@
                               </div>
                             </div>
                             <!-- Button -->
-                            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-white lift mb-4 mr-3">
+                            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-lg btn-success text-dark lift mb-5 mr-3">
                               <i class="fe fe-plus h3 mr-2 align-bottom"></i> Buy
                             </a>
                             <!-- Button -->
-                            <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-white lift mb-4">
+                            <a href="#" data-toggle="modal" data-target="#withdrawMoney" class="btn btn-lg btn-white lift mb-5">
                               <i class="fe fe-minus h3 mr-2 align-bottom"></i> Sell
                             </a>
                             <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
@@ -158,12 +158,62 @@
 
                                     <!-- Title -->
                                     <h6 class="text-uppercase text-secondary mb-2">
+                                      APY
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 text-success mb-0 mr-2">
+                                      <i class="fe fe-arrow-up-right"></i> 42.17%
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
                                       PRICE CHANGE (Since inception)
                                     </h6>
 
                                     <!-- Heading -->
                                     <span class="h2 text-success mb-0 mr-2">
                                       <i class="fe fe-arrow-up-right"></i> 423.00% (+$700.00)
+                                    </span>
+
+                                  </div>
+                                </div> <!-- / .row -->
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="col-12 col-lg-6">
+
+                            <!-- stat -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col mb-3 mb-lg-0">
+
+                                    <!-- Title -->
+                                    <h6 class="text-uppercase text-secondary mb-2">
+                                      Assets under management
+                                    </h6>
+
+                                    <!-- Heading -->
+                                    <span class="h2 mb-0 mr-2">
+                                      100,500.00 DAI
                                     </span>
 
                                   </div>
@@ -311,6 +361,7 @@
                         <thead>
                           <tr>
                             <th class="px-0 bg-transparent border-0 text-white">Fund details</th>
+                            <th class="px-0 bg-transparent border-0 text-secondary text-right"><a href="#" target="_blank">0x52..0000</a></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -336,6 +387,14 @@
                             </td>
                             <td class="px-0 text-white text-right border-0">
                               0%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 text-white border-0">
+                              <strong>Fees period</strong>
+                            </td>
+                            <td class="px-0 text-white text-right border-0">
+                              27 days
                             </td>
                           </tr>
                           <tr>
@@ -392,6 +451,7 @@
                         <thead>
                           <tr>
                             <th class="px-0 bg-transparent border-0 text-dark">Fund details</th>
+                            <th class="px-0 bg-transparent border-0 text-secondary text-right"><a href="#" target="_blank">0x52..0000</a></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -417,6 +477,15 @@
                             </td>
                             <td class="px-0 text-dark text-right border-0">
                               0%
+                            </td>
+                          </tr>
+                          <tr>
+                          <tr>
+                            <td class="px-0 text-dark border-0">
+                              <strong>Fees period</strong>
+                            </td>
+                            <td class="px-0 text-dark text-right border-0">
+                              27 days
                             </td>
                           </tr>
                           <tr>
@@ -1010,49 +1079,6 @@
                         </table>
                       </div>
                       <a class="btn btn-success btn-lg btn-block" href="dashboard-full_3.html">Confirm</a>
-                      <div id="wyre-dropin-widget-container"></div>
-
-                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
-                      <script type="text/javascript">
-                          (function($) {
-
-                              // debit card popup
-                              var widget = new Wyre({
-                                  env: 'test',
-                                  operation: {
-                                      type: 'debitcard-hosted-dialog',
-                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-                                      destCurrency: "ETH",
-                                      sourceAmount: 10.0,
-                                      paymentMethod: 'debit-card'
-                                  }
-                              });
-
-                              widget.on("exit", function (e) {
-                                  console.log("exit", e);
-                              })
-
-                              widget.on("error", function (e) {
-                                  console.log("error", e);
-                              })
-
-                              widget.on("complete", function (e) {
-                                  console.log("complete", e );
-                              });
-
-                              widget.on('ready', function(e) {
-                                  console.log("ready", e );
-                                  // widget.open();
-                              })
-
-                              $('#buy').click(function(){
-                                  console.log('open')
-                                  widget.open();
-                              })
-
-                          })(jQuery);
-                      </script>
                     </div>
                   </div>
                   <h2>FAQ</h2>
@@ -2208,6 +2234,534 @@
     </div><!-- / modal -->
 
 
+    <!-- Modal: manager-buy-position -->
+    <!-- IDEA: modal manager buy position -->
+    <div class="modal fade fixed-right" id="managerBuyPosition" tabindex="-1" role="dialog" aria-labelledby="managerBuyPosition" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center my-5">
+                    Open position
+                  </h1>
+
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label class="mt-1">Asset</label>
+                        <div class="input-group mb-4">
+                          <select class="custom-select custom-select-lg">
+                            <option value="fundtitle">WBTC</option>
+                            <option value="fundtitle">ETH</option>
+                            <option value="fundtitle">ETH long &bull; leverage 1.5x</option>
+                            <option value="fundtitle">ETH short &bull; leverage 1.5x</option>
+                            <option value="fundtitle">DGX</option>
+                            <option value="fundtitle">KNC</option>
+                            <option value="fundtitle">MKR</option>
+                            <option value="fundtitle">LINK</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>KRO to stake</label>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                          <div class="input-group-append">
+                            <button class="btn border" type="button">Max</button>
+                          </div>
+                        </div>
+                        <small class="form-text text-secondary">100.0000 KRO available</small>
+                      </div>
+                      <div class="form-group">
+                        <label>Max. acceptable buy price</label>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control form-control-lg" value="3.00" placeholder="0.00" aria-label="" aria-describedby="">
+                          <div class="input-group-append">
+                            <span class="input-group-text rounded-right border-left-0" id="basic-addon3">%</span>
+                          </div>
+                        </div>
+                        <small class="form-text text-secondary">Your order WON'T be executed if the price goes up by more than this value.</small>
+                      </div>
+                      <div class="form-group">
+                        <label>Liquidity provider</label><br>
+                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="1inch" name="1inch" type="radio"><label class="custom-control-label" for="dexag">1inch</label></div>
+                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="kybernetwork" name="kybernetwork" type="radio"><label class="custom-control-label" for="kybernetwork">Kyber</label></div>
+                      </div>
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Trade details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Asset price (USD)</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                            0.0000
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Staked KR0</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                            0.0000
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="#metamask">Continue</a>
+                    </div>
+                  </div>
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Trade details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Asset price (USD)</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                          0.0000
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Staked KR0</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                          0.0000
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: manager-sell-position -->
+    <!-- IDEA: modal manager sell position -->
+    <div class="modal fade fixed-right" id="managerSellPosition" tabindex="-1" role="dialog" aria-labelledby="managerSellPosition" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center my-5">
+                    Sell position
+                  </h1>
+
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="row justify-content-center mb-4">
+                        <div class="col-6">
+                          <h6 class="header-pretitle mb-2">
+                            Asset price (USD)
+                          </h6>
+                          <span class="h2 mb-0">
+                            100.0000
+                          </span>
+                        </div>
+                        <div class="col-6">
+                          <h6 class="header-pretitle mb-2">
+                            KRO to redeem
+                          </h6>
+                          <span class="h2 mb-0">
+                            142.5643
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-6">
+                          <h6 class="header-pretitle mb-2">
+                            DAI to redeem
+                          </h6>
+                          <span class="h2 mb-0">
+                            12,642.5643
+                          </span>
+                        </div>
+                        <div class="col-6">
+                          <h6 class="header-pretitle mb-2">
+                            ROI
+                          </h6>
+                          <span class="h2 mb-0">
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </span>
+                        </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="row align-items-center justify-content-center mb-3">
+                        <div class="col">
+                          <h6 class="header-pretitle mb-0">
+                            Collateralization status
+                          </h6>
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-sm btn-white" type="button" name="button" data-toggle="modal" data-target="#managerTopUpPosition">Top up</button>
+                        </div>
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <span class="badge badge-soft-success mb-4 d-none">
+                            Safe
+                          </span>
+                          <span class="badge badge-soft-danger mb-4">
+                            In Danger
+                          </span>
+                          <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width:55%">
+                              0.00%
+                            </div>
+                          </div>
+                          <div class="row no-gutters justify-content-between text-secondary mb-3">
+                            <div class="col text-left">
+                              <small class="h6">0.00%</small>
+                              <small class="h6 d-block" i18n="@@orderSafetyInDanger">In danger</small>
+                            </div>
+                            <div class="col text-left position-absolute d-block w-auto" style="left: 49.0000%;transform: translateX(-50%);">
+                              <div style="display: flex; flex-direction: column;">
+                                <div style="border: 0.5px dashed #6e84a3; width: 1px; height: 8px; align-self: center;"></div>
+                                <small class="h6">0.00%&nbsp;•&nbsp;<ng-container
+                                    i18n="@@modalMinCollRatio">min. collateral ratio</ng-container></small>
+                              </div>
+                            </div>
+                            <div class="col text-right">
+                              <small class="h6">0.00%</small>
+                              <small class="h6 d-block" i18n="@@orderSafetySafe">Safe</small>
+                            </div>
+                          </div>
+                          <p class="text-secondary small mb-0" i18n="@@modalTopUpCollateralLiquidationText">If the order's
+                            collateral ratio falls below the minimum, it will be
+                            liquidated, which will cause huge losses.</p>
+                        </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="form-group">
+                        <label>KRO to redeem</label>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                          <div class="input-group-append">
+                            <button class="btn border" type="button">Max</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Max. acceptable sell price</label>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control form-control-lg" value="3.00" placeholder="0.00" aria-label="" aria-describedby="">
+                          <div class="input-group-append">
+                            <span class="input-group-text rounded-right border-left-0" id="basic-addon3">%</span>
+                          </div>
+                        </div>
+                        <small class="form-text text-secondary">Your order WON'T be executed if the price goes down by more than this value.</small>
+                      </div>
+                      <div class="form-group">
+                        <label>Liquidity provider</label><br>
+                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="1inch" name="1inch" type="radio"><label class="custom-control-label" for="dexag">1inch</label></div>
+                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="kybernetwork" name="kybernetwork" type="radio"><label class="custom-control-label" for="kybernetwork">Kyber</label></div>
+                      </div>
+
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Trade details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>KRO to redeem</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                            0.0000
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>DAI to redeem</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                            0.0000
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="#metamask">Continue</a>
+                    </div>
+                  </div>
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Trade details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>KR0 to redeem</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                          0.0000
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>DAI to redeem</strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                          0.0000
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: manager-top-up-position -->
+    <!-- IDEA: modal manager top up position -->
+    <div class="modal fade fixed-right" id="managerTopUpPosition" tabindex="-1" role="dialog" aria-labelledby="managerTopUpPosition" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-lg-0">
+            <div class="d-inline-block w-lg-60">
+              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                <i class="fe fe-arrow-left h2"></i>
+              </button>
+              <div class="row justify-content-center">
+                <div class="col col-lg-8">
+                  <!-- Heading -->
+                  <h1 class="display-4 text-center my-5">
+                    Top up position
+                  </h1>
+
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <div class="row align-items-center justify-content-center mb-3">
+                        <div class="col">
+                          <h6 class="header-pretitle mb-0">
+                            Collateralization status
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="row align-items-center mb-4">
+                        <div class="col">
+                          <span class="badge badge-soft-success mb-4 d-none">
+                            Safe
+                          </span>
+                          <span class="badge badge-soft-danger mb-4">
+                            In Danger
+                          </span>
+                          <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width:55%">
+                              0.00%
+                            </div>
+                          </div>
+                          <div class="row no-gutters justify-content-between text-secondary mb-3">
+                            <div class="col text-left">
+                              <small class="h6">0.00%</small>
+                              <small class="h6 d-block" i18n="@@orderSafetyInDanger">In danger</small>
+                            </div>
+                            <div class="col text-left position-absolute d-block w-auto" style="left: 49.0000%;transform: translateX(-50%);">
+                              <div style="display: flex; flex-direction: column;">
+                                <div style="border: 0.5px dashed #6e84a3; width: 1px; height: 8px; align-self: center;"></div>
+                                <small class="h6">0.00%&nbsp;•&nbsp;<ng-container
+                                    i18n="@@modalMinCollRatio">min. collateral ratio</ng-container></small>
+                              </div>
+                            </div>
+                            <div class="col text-right">
+                              <small class="h6">0.00%</small>
+                              <small class="h6 d-block" i18n="@@orderSafetySafe">Safe</small>
+                            </div>
+                          </div>
+                          <p class="text-secondary small mb-0" i18n="@@modalTopUpCollateralLiquidationText">If the order's
+                            collateral ratio falls below the minimum, it will be
+                            liquidated, which will cause huge losses.</p>
+                        </div>
+                      </div>
+                      <!-- Collateralization target -->
+                      <div class="row mb-4">
+                        <div class="col">
+                          <div class="form-group">
+                            <label>Collateralization target</label>
+                            <div class="input-group mb-2">
+                              <input type="number" min="0.0" class="form-control form-control-lg border-right-0 pr-0"
+                                aria-describedby="percent of collateralization target" placeholder="0.0"
+                                id="collateral-ratio-target-input" (input)="continueEnabled = true">
+                              <div class="input-group-append">
+                                <span class="input-group-text border-left-0 border-right-0"
+                                  id="desiredCollateralizationUnit">%</span>
+                                <button class="btn btn-white" name="button" type="button"
+                                  *ngIf="toBigNumber(sellData.currCash).lt(sellData.currBorrow)" (click)="maxTopupTarget()"
+                                  i18n="@@modalCtaMax">Max</button>
+                              </div>
+                            </div>
+                            <small id="kroBalance" class="form-text text-secondary d-inline-block mb-0 mt-1">
+                              0.00%&nbsp;•&nbsp;
+                              Max possible collateral ratio
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-responsive d-block d-lg-none mb-4">
+                        <table class="table mb-0">
+                          <thead>
+                            <tr>
+                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="px-0 border-0 text-white">
+                                <strong>Collateralization target %</strong>
+                              </td>
+                              <td class="px-0 text-right text-white border-0">
+                            0.00
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="btn btn-success btn-lg btn-block" href="#metamask">Continue</a>
+                    </div>
+                  </div>
+                  <h2>FAQ</h2>
+                  <div class="card card-inactive mb-5">
+                    <div class="card-body">
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3>Question</h3>
+                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
+              <div class="bg-white vh-100 p-4">
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 border-0 text-dark">
+                              <strong>Collateralization target %<strong>
+                            </td>
+                            <td class="px-0 text-right text-dark border-0">
+                          0.00
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
     <!-- Modal: video -->
     <!-- IDEA: modal video -->
     <div class="modal fade fixed-right" id="video" tabindex="-1" role="dialog" aria-labelledby="video" aria-hidden="true">
@@ -2269,13 +2823,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./investments.html">
-                <i class="fe fe-dollar-sign"></i> Investments
+              <a class="nav-link" href="./market.html">
+                <i class="fe fe-activity"></i> Market
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./market.html">
-                <i class="fe fe-activity"></i> Market
+              <a class="nav-link" href="./ranking.html">
+                <i class="fe fe-award"></i> Ranking
               </a>
             </li>
           </ul>
@@ -2341,11 +2895,11 @@
               <div class="col">
                 <!-- Title -->
                 <h1 class="header-title display-3">
-                  $210,000.00 <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 3.05% today</span>
+                  $210,000.00
                 </h1>
                 <!-- Pretitle -->
                 <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
-                  Portfolio value
+                  Total portfolio value
                   <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     USD <i class="fe fe-chevron-down text-secondary"></i>
                   </button>
@@ -2355,10 +2909,40 @@
                     <a class="dropdown-item" href="#!">ETH</a>
                   </div>
                 </div>
-                <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#invest" class="btn btn-white lift mb-5 mr-3">
-                  <i class="fe fe-plus h3 mr-2 align-bottom"></i> Make investment
-                </a>
+                <div class="card-deck my-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Total risk taken
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        96.02%
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-0">
+                        Total est. commissions
+                        <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0">
+                        25,000.7062 DAI
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#funds" role="tab" aria-controls="Holdings" aria-selected="true">Funds managed</a>
@@ -2382,7 +2966,7 @@
               <div class="col-6">
 
                 <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                <a href="./fund.html">
                   <div class="card">
                     <div class="card-body">
                       <div class="row align-items-center">
@@ -2397,8 +2981,6 @@
                           <span class="h2 text-white mb-0 mr-2 d-block">
                             $100,000.00
                           </span>
-                          <!-- Heading -->
-                          <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 1.05% today</span>
 
                         </div>
                         <div class="col-auto">
@@ -2417,7 +2999,7 @@
               <div class="col-6">
 
                 <!-- fund  -->
-                <a href="#" data-toggle="modal" data-target="#fundDetails">
+                <a href="./fund.html">
                   <div class="card">
                     <div class="card-body">
                       <div class="row align-items-center">
@@ -2432,8 +3014,6 @@
                           <span class="h2 text-white mb-0 mr-2 d-block">
                             $110,000.00
                           </span>
-                          <!-- Heading -->
-                          <span class="text-success small align-top"><i class="fe fe-arrow-up-right"></i> 7.45% today</span>
 
                         </div>
                         <div class="col-auto">
