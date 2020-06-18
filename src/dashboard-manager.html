@@ -39,6 +39,10 @@
                     <a class="dropdown-item" href="#!">ETH</a>
                   </div>
                 </div>
+                <!-- Button -->
+                <a href="#" data-toggle="modal" data-target="#buyRepToken" class="btn btn-lg btn-success text-dark lift mb-3">
+                  <i class="fe fe-zap h3 mr-2 align-bottom"></i> Become manager
+                </a>
                 <div class="card-deck my-4">
                   <div class="card">
                     <div class="card-body">
@@ -75,10 +79,7 @@
                 </div>
                 <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active text-center font-weight-bold h3 mb-0" id="Holdings-tab" data-toggle="tab" href="#funds" role="tab" aria-controls="Holdings" aria-selected="true">Funds managed</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="transactions-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="false">Transactions</a>
+                    <span class="nav-link active text-center font-weight-bold h3 mb-0" id="fundsManaged-tab" data-toggle="tab" role="tab" aria-controls="fundsManaged" aria-selected="true">Funds managed</span>
                   </li>
                 </ul>
               </div>
@@ -89,7 +90,7 @@
       </div> <!-- / .header -->
 
       <!-- CARDS -->
-      <div class="container-fluid">
+      <div class="container-fluid mb-6">
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="funds" role="tabpanel" aria-labelledby="funds-tab">
             <div class="row">
@@ -161,80 +162,9 @@
               </div>
             </div> <!-- / .row -->
           </div>
-          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
-            <div class="row">
-              <div class="col-12">
-
-                <!-- Recent activity -->
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
-
-                        <!-- Title -->
-                        <h4 class="card-header-title">
-                          Recent activity
-                        </h4>
-
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
-                  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;tx-date&quot;, &quot;tx-details&quot;, &quot;tx-amount&quot;]}">
-                    <table class="table table-sm table-nowrap card-table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-date">
-                              Date
-                            </a>
-                          </th>
-                          <th>
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-details">
-                              Details
-                            </a>
-                          </th>
-                          <th class="text-right">
-                            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
-                              Amount
-                            </a>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="list">
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Bought shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            +10.0000 PDF1
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="tx-date">
-                            <time datetime="2018-10-24">01/14/2020<br> <span class="text-secondary small">11:37:07 AM</span> </time>
-                          </td>
-                          <td class="type-details">
-                            <h4 class="mb-2">Sold shares</h4>
-                            <a class="align-items-center" target="_blank" href="https://etherscan.io/tx/0x1df72e056ae8ccd32dbe7de32596a4b262b3ed9aa069cbd51502b5808cc0e507">Tx details<i class="fe fe-external-link ml-2"></i></a>
-                          </td>
-                          <td class="type-amount text-right">
-                            -10.0000 PDF1
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
         </div>
         <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+        @@include("partials/bottombar.html")
       </div>
 
     </div><!-- / .main-content -->

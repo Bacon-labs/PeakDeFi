@@ -469,6 +469,52 @@
   }
 })();
 
+(function() {
+  var chart = document.getElementById('overviewChart3');
+
+  if (chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            id: 'yAxisOne',
+            type: 'linear',
+            display: 'auto',
+            ticks: {
+              callback: function(value) {
+                return '$' + value + 'k';
+              }
+            }
+          }, {
+            id: 'yAxisTwo',
+            type: 'linear',
+            display: 'auto',
+            ticks: {
+              callback: function(value) {
+                return value + 'hrs';
+              }
+            }
+          }]
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Earned',
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40],
+          yAxisID: 'yAxisOne'
+        }, {
+          label: 'Hours Worked',
+          data: [7, 35, 12, 27, 34, 17, 19, 30, 28, 32, 24, 39],
+          yAxisID: 'yAxisTwo',
+          hidden: true
+        }]
+      }
+    });
+  }
+})();
+
 // Sparkline chart
 
 (function() {
