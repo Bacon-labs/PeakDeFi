@@ -110,7 +110,7 @@
                   </div>
                 </div>
                 <!-- Button -->
-                <a href="#" data-toggle="modal" data-target="#managerBuyPosition" class="btn btn-lg btn-success text-dark lift mb-5 mr-3">
+                <a href="#" data-toggle="modal" data-target="#managerBuyPosition" class="btn btn-lg btn-primary lift mb-5 mr-3">
                   <i class="fe fe-plus h3 mr-2 align-bottom"></i> Trade
                 </a>
                 <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
@@ -119,6 +119,9 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-center font-weight-bold h3 mb-0" id="fundTrades-tab" data-toggle="tab" href="#fundTrades" role="tab" aria-controls="fundTrades" aria-selected="false">Trades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-center font-weight-bold h3 mb-0" id="ranking-tab" data-toggle="tab" href="#ranking" role="tab" aria-controls="ranking" aria-selected="false">Ranking</a>
                   </li>
                 </ul>
               </div>
@@ -311,12 +314,98 @@
 
               </div>
             </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+                <!-- fund details -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Fund details
+                        </h4>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="card-body">
+                    
+                  <div class="table-responsive mb-0">
+                    <table class="table mb-0">
+                      <thead>
+                        <tr>
+                          <th class="px-0 bg-transparent border-0">Fund address</th>
+                          <th class="px-0 bg-transparent border-0 text-secondary text-right"><a href="#" target="_blank">0x52..0000</a></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Management fee</strong>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            0.1% of AUM
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Success fee</strong>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            20.0% of profit
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Redemption fee</strong>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            0%
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Fees period</strong>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            27 days
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Fund's cycle</strong><br>
+                            <small class="text-white">Management phase</small><br>
+                            <small class="text-white">Investor sell phase</small><br>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            30 days <br>
+                            <small class="text-white">27 days</small><br>
+                            <small class="text-white">3 days</small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-0">
+                            <strong>Time left before sell allowed</strong>
+                          </td>
+                          <td class="px-0 text-right border-0">
+                            1d 12h 24s
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="fundTrades" role="tabpanel" aria-labelledby="fundTrades-tab">
             <div class="row">
               <div class="col-12">
 
-                <!-- Goals -->
+                <!-- Trades -->
                 <div class="card">
                   <div class="card-header">
                     <div class="row align-items-center">
@@ -383,7 +472,7 @@
                             <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
                           </td>
                           <td class="text-right">
-                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                            <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
                           </td>
                         </tr>
                         <tr>
@@ -412,7 +501,7 @@
                           </td>
                           <td class="text-right">
                             <button class="btn btn-sm btn-white mr-3" type="button" name="button" data-toggle="modal" data-target="#managerTopUpPosition">Top up</button>
-                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                            <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
                           </td>
                         </tr>
                         <tr>
@@ -440,14 +529,14 @@
                             <time datetime="2018-10-24">01/14/2020<br>11:37:07 AM</time>
                           </td>
                           <td class="text-right">
-                            <button class="btn btn-sm btn-success text-dark" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
+                            <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#managerSellPosition">Sell</button>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-                <!-- Goals -->
+                <!-- History -->
                 <div class="card">
                   <div class="card-header">
                     <div class="row align-items-center">
@@ -544,71 +633,131 @@
               </div>
             </div> <!-- / .row -->
           </div>
+          <div class="tab-pane fade" id="ranking" role="tabpanel" aria-labelledby="ranking-tab">
+            <div class="row">
+              <div class="col-12">
+
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+        
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Managers ranking
+                        </h4>
+        
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0">
+                    <table class="table table-sm table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th class="text-secondary">
+                            Manager
+                          </th>
+                          <th class="text-secondary">
+                            Rank
+                          </th>
+                          <th class="text-secondary">
+                            KRO balance
+                          </th>
+                          <th class="text-secondary">
+                            ROI since inception
+                          </th>
+                          <th class="text-secondary">
+                            ROI in current cycle
+                          </th>
+                          <th class="text-secondary">
+                            Lifetime commissions (DAI)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td>
+                            <div class="avatar avatar-sm mr-2">
+                              <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                            </div>
+                            You <i class="fe fe-star"></i>
+                          </td>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            100.0000
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            50.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#">
+                              <div class="avatar avatar-sm mr-2">
+                                <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                              </div>
+                              0x65..0334
+                            </a>
+                          </td>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            102.3256
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#">
+                              <div class="avatar avatar-sm mr-2">
+                                <img src="@@webRoot/assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                              </div>
+                              0x65..0334
+                            </a>
+                          </td>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            62.3256
+                          </td>                          
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            <span class="text-success"><i class="fe fe-arrow-up-right"></i> 10.32%</span>
+                          </td>
+                          <td>
+                            10.00
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
         </div>
-        <div class="table-responsive mb-5">
-          <table class="table mb-0">
-            <thead>
-              <tr>
-                <th class="px-0 bg-transparent border-0">Fund details</th>
-                <th class="px-0 bg-transparent border-0 text-secondary text-right"><a href="#" target="_blank">0x52..0000</a></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Management fee</strong>
-                </td>
-                <td class="px-0 text-right border-0">
-                  0.1% of AUM
-                </td>
-              </tr>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Success fee</strong>
-                </td>
-                <td class="px-0 text-right border-0">
-                  20.0% of profit
-                </td>
-              </tr>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Redemption fee</strong>
-                </td>
-                <td class="px-0 text-right border-0">
-                  0%
-                </td>
-              </tr>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Fees period</strong>
-                </td>
-                <td class="px-0 text-right border-0">
-                  27 days
-                </td>
-              </tr>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Fund's cycle</strong><br>
-                  <small class="text-white">Management phase</small><br>
-                  <small class="text-white">Investor sell phase</small><br>
-                </td>
-                <td class="px-0 text-right border-0">
-                  30 days <br>
-                  <small class="text-white">27 days</small><br>
-                  <small class="text-white">3 days</small>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-0 border-0">
-                  <strong>Time left before sell allowed</strong>
-                </td>
-                <td class="px-0 text-right border-0">
-                  1d 12h 24s
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
         <p class="mb-5 text-secondary text-center small">PeakDeFi smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
         @@include("partials/bottombar.html")
       </div>

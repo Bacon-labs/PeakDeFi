@@ -11489,4 +11489,4 @@ a:focus, button:focus {
 
 @media (max-width: 768px) {
   .modal-dialog-vertical {
-    max-width: 350px; } }
+    max-width: 100%; } }
