@@ -11474,7 +11474,7 @@ a:focus, button:focus {
   background-size: 200% 150%; }
 
 .bg-dark {
-  background-color: #131415; }
+  background-color: #131415 !important; }
 
 .btn-white-opacity {
   width: 88px !important;
