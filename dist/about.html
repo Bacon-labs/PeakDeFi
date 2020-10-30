@@ -602,50 +602,6 @@
                         </table>
                       </div>
                       <a class="btn btn-primary btn-lg btn-block" href="dashboard-full_3.html">Buy Fund share A</a>
-                      <button class="btn btn-link btn-lg btn-block text-white" id='buy'>Use Fiat</button>
-                      <div id="wyre-dropin-widget-container"></div>
-
-                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
-                      <script type="text/javascript">
-                          (function($) {
-
-                              // debit card popup
-                              var widget = new Wyre({
-                                  env: 'test',
-                                  operation: {
-                                      type: 'debitcard-hosted-dialog',
-                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-                                      destCurrency: "ETH",
-                                      sourceAmount: 10.0,
-                                      paymentMethod: 'debit-card'
-                                  }
-                              });
-
-                              widget.on("exit", function (e) {
-                                  console.log("exit", e);
-                              })
-
-                              widget.on("error", function (e) {
-                                  console.log("error", e);
-                              })
-
-                              widget.on("complete", function (e) {
-                                  console.log("complete", e );
-                              });
-
-                              widget.on('ready', function(e) {
-                                  console.log("ready", e );
-                                  // widget.open();
-                              })
-
-                              $('#buy').click(function(){
-                                  console.log('open')
-                                  widget.open();
-                              })
-
-                          })(jQuery);
-                      </script>
                     </div>
                   </div>
 
@@ -831,50 +787,6 @@
                         </table>
                       </div>
                       <a class="btn btn-primary btn-lg btn-block" href="dashboard-full_3.html">Buy with ETH</a>
-                      <button class="btn btn-link btn-lg btn-block text-white" id='buy'>Use Fiat</button>
-                      <div id="wyre-dropin-widget-container"></div>
-
-                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
-                      <script type="text/javascript">
-                          (function($) {
-
-                              // debit card popup
-                              var widget = new Wyre({
-                                  env: 'test',
-                                  operation: {
-                                      type: 'debitcard-hosted-dialog',
-                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-                                      destCurrency: "ETH",
-                                      sourceAmount: 10.0,
-                                      paymentMethod: 'debit-card'
-                                  }
-                              });
-
-                              widget.on("exit", function (e) {
-                                  console.log("exit", e);
-                              })
-
-                              widget.on("error", function (e) {
-                                  console.log("error", e);
-                              })
-
-                              widget.on("complete", function (e) {
-                                  console.log("complete", e );
-                              });
-
-                              widget.on('ready', function(e) {
-                                  console.log("ready", e );
-                                  // widget.open();
-                              })
-
-                              $('#buy').click(function(){
-                                  console.log('open')
-                                  widget.open();
-                              })
-
-                          })(jQuery);
-                      </script>
                     </div>
                   </div>
 
@@ -3157,23 +3069,22 @@
           <div class="avatar mr-2">
             <img src="assets/img/logo.png" class="avatar-img rounded" alt="...">
           </div>
-          <span class="d-none d-lg-inline-block text-white">PEAK DeFi</span>
+          <span class="d-none d-lg-inline-block text-white">PEAKDEFI</span>
         </a>
         <div class="d-flex align-items-center">
-          <a class="btn btn-white rounded-xl d-flex align-items-center lift mr-2 mr-lg-3" href="https://bacon-labs.github.io/PeakDeFi/dist/dashboard.html" target="_blank">
+          <a class="btn btn-white rounded-xl d-flex align-items-center lift mr-2 mr-lg-3" href="" target="_blank">
             <div class="avatar avatar-xs mr-2">
               <span class="avatar-title rounded-circle bg-warning"><i class="fe fe-dollar-sign text-dark"></i></span>
             </div>
             Invest
           </a>
-          <a class="btn btn-white rounded-xl d-flex align-items-center lift" href="https://bacon-labs.github.io/PeakDeFi/dist/rewards.html" target="_blank">
+          <a class="btn btn-white rounded-xl d-flex align-items-center lift" href="" target="_blank">
             <div class="avatar avatar-xs mr-2">
               <span class="avatar-title rounded-circle bg-success"><i class="fe fe-award text-dark"></i></span>
             </div>
             Earn <span class="d-none d-lg-flex ml-2">rewards</span>
           </a>
         </div>
-
       </div>
     </nav>
 
@@ -3614,9 +3525,11 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-12 col-lg-auto mr-auto mb-5 mb-lg-0">
-            <div class="avatar">
+            <div class="avatar mb-4">
               <img src="assets/img/logo.png" class="avatar-img rounded" alt="...">
             </div>
+            <a class="btn btn-block btn-secondary rounded-xl lift" href="https://ethereum.org/" target="_blank"><img class="mr-2" src="assets/img/eth-diamond-rainbow.png" height="24" alt="">Build on Ethereum</a>
+            <a class="btn btn-block btn-secondary rounded-xl lift" href="https://solidity.readthedocs.io/en/v0.7.4/" target="_blank"><img class="mr-2" src="assets/img/solidity-logo.svg" height="24" alt="">Crafted with Solidity</a>
           </div>
           <div class="col-12 col-lg-2 mb-5 mb-lg-0">
             <h6 class="text-uppercase text-secondary mb-2">
@@ -3633,11 +3546,6 @@
             <nav class="nav flex-column">
               <a class="nav-link text-white pl-0" href="" title="Get answers at the help centre">Help Center</a>
               <a class="nav-link text-white pl-0" href="">Security audits</a>
-              <a class="nav-link text-white pl-0" href="" target="_blank">Twitter</a>
-              <a class="nav-link text-white pl-0" href="" target="_blank">Discord</a>
-              <a class="nav-link text-white pl-0" href="" target="_blank">Telegram</a>
-              <a class="nav-link text-white pl-0" href="" target="_blank">Github</a>
-              <a class="nav-link text-white pl-0" href="" target="_blank">Medium</a>
             </nav>
           </div>
           <div class="col-12 col-lg-2 mb-5 mb-lg-0">
@@ -3653,9 +3561,18 @@
         <!-- Divider -->
         <hr class="my-4 my-lg-3">
         <div class="row justify-content-center justify-content-lg-between">
-          <div class="col-auto mb-4 mb-lg-0">
+          <div class="col-auto mb-4 mb-lg-0 d-flex align-items-center">
             <span class="text-secondary">© 2020 <a class="text-secondary" href="">Peak Tech.</a></span>
           </div>
+          <div class="col-auto mb-4 mb-lg-0">
+            <nav class="nav flex-row">
+              <a class="nav-link text-white pl-0" href="https://t.me/peakdefi_official" target="_blank"><i class="fe fe-send"></i></a>
+              <a class="nav-link text-white pl-0" href="https://twitter.com/peakdefi" target="_blank"><i class="fe fe-twitter"></i></a>
+              <a class="nav-link text-white pl-0" href="https://medium.com/@PeakDeFi" target="_blank"><img src="assets/img/Medium-Symbol-White-RGB@1x.png" width="24" alt=""></a>
+              <a class="nav-link text-white pl-0" href="https://github.com/peakdefi" target="_blank"><i class="fe fe-github"></i></a>
+            </nav>
+          </div>
+      
         </div>
       </div>
 
